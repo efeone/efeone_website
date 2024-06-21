@@ -1608,7 +1608,7 @@ button:focus {
   .timeline-row {
       padding-left: 50%;
       position: relative;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
   }
 
   .timeline-row .timeline-time {
@@ -1726,6 +1726,7 @@ button:focus {
   }
 
   .timeline-row:nth-child(odd) {
+      margin-bottom: 7%;
       padding-left: 0;
       padding-right: 50%;
   }
