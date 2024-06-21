@@ -51,8 +51,8 @@ function load_main_data() {
       apiResult.forEach((result, idx) => {
         content += `
         <div class="timeline-row">
-          <div class="timeline-time" style="display: flex;">
-            <img src="https://jalebi.efeone.com/${result.image}" style="width:30%" alt="">
+          <div class="timeline-time">
+            <img src="https://jalebi.efeone.com/${result.image}" style="width:20%" alt="">
             <h4>${result.year}</h4>
           </div>
           <div class="timeline-dot fb-bg"></div>
