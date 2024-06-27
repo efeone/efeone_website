@@ -2325,31 +2325,7 @@ blockquote, dl, dd, h1, h2, h3, h4, h5, h6, hr, figure, p, pre {
   padding-left: 12px;
 }
 
-/*
-------------------------------------------
-      Testimonial Section
-------------------------------------------
-/* h2 {
-	color: #333;
-	text-align: center;
-	text-transform: uppercase;
-    font-family: 'Noto Sans', sans-serif;
-	font-weight: bold;
-	position: relative;
-	margin: 30px 0 60px;
-} */
-/* h2::after {
-	content: "";
-	width: 140px;
-	position: absolute;
-	margin: 0 auto;
-	height: 3px;
-	background: #db584e;
-	left: 0;
-	right: 0;
-	bottom: -10px;
-    opacity: .8;
-} */
+
 .col-center {
 	margin: 0 auto;
 	float: none !important;
@@ -2423,126 +2399,14 @@ blockquote, dl, dd, h1, h2, h3, h4, h5, h6, hr, figure, p, pre {
 	box-shadow: inset 0 2px 1px rgba(0,0,0,0.2);
 }
 
-
-/* --------------------------------
-      Careers section
-------------------------------- */
-.menu-item-badge,#wrapper .wp-block-search__button,.key-icon-box .ib-badge,.feature-sections-wrapper .play-video .sway-play,.modal-content-contact .redux-social-media-list .fab,.hover_outline_primary:hover .iconita,.kd-icon-list .kd-icon-list-item a:hover,.white-button-form .wpcf7 .wpcf7-submit,.kd-side-panel .panel-close:hover .fa,.topbar #menu-topbar-menu li a:hover,.btn-hover-1 .tt_button:hover .iconita,.side-content-title-label,.background-dropdown-effect .navbar-nav .menu-item-has-children .dropdown-menu a:hover,.business-info-wrapper i,.keydesign-cart .badge,.header-wishlist .badge,.keydesign-cart ul.cart_list li a.kd_checkout_btn:hover,.keydesign-cart ul.cart_list li a.kd_cart_btn:hover,.container .rw-author-details h5,.topbar-phone a:hover,.topbar-email a:hover,.transparent-navigation #menu-topbar-menu li a:hover,.transparent-navigation .navbar.navbar-default .topbar-phone a:hover,.transparent-navigation .navbar.navbar-default .topbar-email a:hover,.tt_button.second-style .iconita,.blog-social-sharing a:hover,.blog-social-sharing a:hover i,#single-page #comments input[type="submit"]:hover,.tt_button.tt_secondary_button,.tt_button.tt_secondary_button .iconita,.team-carousel .owl-item .team-member.design-creative .team-socials a,.format-quote .entry-wrapper:before,.blog-single-title a:hover,.upper-footer i:hover,.wpb-js-composer .vc_tta-container .vc_tta-tabs.vc_tta-tabs-position-left .vc_tta-tab a:hover,.back-to-top,.back-to-top .fa,.pricing-options-container .pricing-option-text.with-tooltip:before,.owl-nav div.owl-next,.owl-nav div.owl-prev,.post .entry-categories a,.life .entry-categories a,.tags a,.tagcloud a,.tags-label,.wpb-js-composer .vc_tta-container .vc_tta-tabs.vc_tta-tabs-position-left .vc_tta-tab.vc_active a,.wpb-js-composer .vc_tta-container .vc_tta-tabs.vc_tta-tabs-position-right .vc_tta-tab a:hover,#landing-page .demos-section .kd-photobox:hover h5,#landing-page .demos-section .kd-photobox h5:after,.wpb-js-composer .vc_tta-container .vc_tta-tabs.vc_tta-tabs-position-right .vc_tta-tab.vc_active a,footer.underline-effect .textwidget a:hover,.kd-price-block .pb-price,.blog_widget.widget_categories ul li a:hover,.team-member.design-classic .kd-team-contact a:hover,#commentform #submit:hover,.kd-panel-subtitle ul>li:before,.kd-panel-subtitle ol>li:before,.tab-text-container ul>li:before,.wpb_text_column ul>li:before,.menubar #main-menu .navbar-nav .mega-menu.menu-item-has-children .dropdown > a,.modal-content-contact .redux-social-media-list i:hover,.related-content .life .post-link:hover,.related-content .life h5 a:hover,#posts-content .post-link:hover,.vc_grid-item-mini .blog-detailed-grid .vc_gitem-post-data.vc_gitem-post-data-source-post_date p:before,.vc_grid-item-mini .blog-detailed-grid .vc_gitem-post-data.vc_gitem-post-data-source-post_date div:before,#posts-content.blog-detailed-grid .entry-meta a:hover,.large-counter .kd_counter_units,.footer_widget .redux-social-media-list i,#single-page .bbp-login-form .user-submit:hover,.menubar #main-menu .navbar-nav .mega-menu.menu-item-has-children .dropdown:hover > a,.kd-photobox .phb-content.text-left .phb-btncontainer a.phb-simple-link,.key-icon-box:hover .ib-link a,.footer-bar .footer-nav-menu ul li a:hover,#popup-modal .close:hover,body.maintenance-mode .container h2,.wpb-js-composer .vc_tta-container .vc_tta.vc_tta-style-classic.vc_tta-tabs-position-top .vc_tta-tabs-container .vc_tta-tabs-list li a:hover,blockquote:before,.feature-sections-wrapper .feature-sections-tabs .nav-tabs a:hover i,.feature-sections-wrapper .feature-sections-tabs .nav-tabs li.active a i,.port-prev.tt_button,.port-next.tt_button,.upper-footer .socials-widget a:hover .fa,.footer_widget ul a:hover,span.bbp-admin-links a:hover,#bbpress-forums #bbp-single-user-details #bbp-user-navigation a:hover,.vc_grid-item-mini .vc_gitem-post-data.vc_gitem-post-data-source-post_date div:before,.vc_grid-item-mini .vc_gitem-post-data.vc_gitem-post-data-source-post_author a:before,.testimonials.slider.with-image .tt-container .author,.vc_grid-item-mini .blog-detailed-grid .vc_btn3-container:hover a,.feature-sections-wrapper .feature-sections-tabs .nav-tabs a:hover,.topbar-lang-switcher ul li a:hover span,.feature-sections-wrapper .feature-sections-tabs .nav-tabs li.active a,div.bbp-breadcrumb a:hover,#bbpress-forums div.bbp-topic-author a.bbp-author-name,#bbpress-forums div.bbp-reply-author a.bbp-author-name,.kd_pie_chart .kd-piechart-icon,.breadcrumbs a:hover,.es-accordion .es-speaker-container .es-speaker-name,.row .vc_toggle_size_md.vc_toggle_simple .vc_toggle_title:hover h4,.row .vc_toggle_size_md.vc_toggle_default .vc_toggle_title:hover h4,.team-member.design-minimal .team-socials a,.wpb-js-composer .vc_tta-container .vc_tta-color-white.vc_tta-style-modern .vc_tta-tab.vc_active a,.tcards_header .tcards-name,.team-member.design-two:hover .team-socials .fab:hover,.team-member.design-two .team-socials .fab:hover,.content-area .vc_basic_grid .vc_grid .blog-detailed-grid .vc_gitem-post-category-name a,.navbar-nav li.dropdown:hover .dropdown-menu:hover li a:hover,.life-meta.share-meta .fa:hover,.blog_widget ul li a:hover,.blog_widget ol li a:hover,#posts-content .entry-meta a:hover,.keydesign-cart:hover .cart-icon,.kd_counter_units,#comments input[type="submit"],.search-submit:hover,.blog-single-content .tags a,.lower-footer a:hover,#posts-content .post .blog-single-title a:hover,#posts-content.blog-minimal-list .blog-single-title a:hover,#posts-content.blog-img-left-list .blog-single-title a:hover,.socials-widget a:hover .fa,.socials-widget a:hover,#customizer .sway-tooltip,.footer_widget .menu li a:hover,.row .vc_toggle_size_md.vc_toggle_simple .vc_toggle_title:hover h4,#single-page .single-page-content .widget ul li a:hover,#comments .reply a:hover,#comments .comment-meta a:hover,#kd-slider .secondary_slider,#single-page .single-page-content .widget ul li.current-menu-item a,.team-socials .fa:hover,#posts-content .post .tt_button:hover .fa,#posts-content .post .tt_button:hover,.pricing-table .tt_button,.topbar-phone .iconsmind-Telephone ,.topbar-email .iconsmind-Mail,.modal-content-contact .key-icon-box .service-heading a:hover,.pricing-table.active .tt_button:hover,.footer-business-content a:hover,.vc_grid-item-mini .vc_gitem-zone .vc_btn3.vc_btn3-style-custom,.star-rating span,.es-accordion .es-heading h4 a:hover,.keydesign-cart ul.product_list_widget .cart-item:hover,#customizer .options a:hover i,#customizer .options a:hover,#single-page input[type="submit"]:hover,.bbp-submit-wrapper .button:hover,#posts-content .post input[type="submit"]:hover,#comments .reply a:hover,.meta-content .tags a:hover,.navigation.pagination .next,.navigation.pagination .prev,.product_meta a:hover,.tags a:hover,.tagcloud a:hover,.tt_button.second-style,.lower-footer .pull-right a:hover,.section .wpcf7-mail-sent-ok,.blog-header-form .wpcf7-mail-sent-ok,.upper-footer .modal-menu-item,.video-socials a:hover .fa,.kd_pie_chart .pc-link a:hover,.vc_grid-item-mini .vc_gitem_row .vc_gitem-col h4:hover,.fa,.far,.fas,.fab,.wpcf7 .wpcf7-submit:hover,.contact .wpcf7-response-output,.video-bg .secondary-button:hover,#headerbg li a.active,#headerbg li a.active:hover,.footer-nav a:hover ,.wpb_wrapper .menu a:hover ,.text-danger,.blog_widget ul li a:before,.pricing i,.content-area .vc_grid .vc_gitem-zone-c .vc_general,code,.subscribe-form header .wpcf7-submit,#posts-content .page-content ul li:before,.chart-content .nc-icon-outline,.chart,.row .vc_custom_heading a:hover,.secondary-button-inverse,.primary-button.button-inverse:hover,.primary-button,a,.services-list a:hover,.kd-process-steps .pss-step-number span,.navbar-default .navbar-nav > .active > a,.pss-link a:hover,.content-area .vc_grid-filter>.vc_grid-filter-item:hover>span,.kd_number_string,.featured_content_parent .active-elem h4,.contact-map-container .toggle-map:hover .fa,.contact-map-container .toggle-map:hover,.testimonials.slider .tt-container:before,.tt_button:hover,div.wpforms-container-full .wpforms-form input[type=submit]:hover,div.wpforms-container-full .wpforms-form button[type=submit]:hover,.nc-icon-outline,.phb-simple-link:hover,.content-area .vc_grid-item-mini:hover .vc_gitem-zone-c .vc_gitem_row .vc_gitem-col h4,.kd-title-label .kd-title-label-transparent,.wpb_text_column ol>li:before,.wpb_text_column ul>li:before,.key-icon-box .ib-link a:hover,.content-area .vc_grid-item-mini .vc_gitem-zone-c .vc_gitem_row .vc_gitem-col h4:after,.content-area .vc_grid-filter>.vc_grid-filter-item.vc_active>span,.features-tabs li.active .tab-title,.wp-block-button .wp-block-button__link:hover,.wp-block-archives li a:hover,.wp-block-categories.wp-block-categories-list li a:hover,.cb-container .cb-img-area i,.kd-counter-icon i,.features-tabs .tab-controls li i,.key-icon-box i,.business-info-wrapper .toggle-map-info,.process-icon i,.blog_widget.widget_product_categories ul li a:hover,.kd-progress-icon i,.side-content-wrapper i.section-icon,.kd-price-block .pb-content-wrap h5 a:hover,.transparent-navigation .navbar:not(.navbar-shrink) #menu-topbar-menu li.current-menu-item a,.transparent-navigation .navbar:not(.navbar-shrink) .navbar-topbar li.current-menu-item a,.topbar #menu-topbar-menu li.current-menu-item a,.topbar li.current-menu-item a {
-      color: #777AF2;
-  }
-
-  .back-to-top.scroll-position-style circle {
-      stroke: #777AF2;
-  }
-
-  .timeline-link:hover,.kd-process-steps.process-number-template .process-text-link:hover,.kd-process-steps.process-number-template ul li:hover .pss-step-number span,.btn-hover-2 .tt_button.hover_solid_white:hover .iconita,.btn-hover-2 .tt_button.hover_solid_white:hover,.btn-hover-2 .tt_button.hover_outline_white:hover .iconita,.btn-hover-2 .tt_button.hover_outline_white:hover,.navbar.navbar-default .menubar .navbar-nav .active > a {
-      color: #777AF2!important;
-  }
-
-  #cookie-notice .cn-button,.content-area .vc_gitem-animate-scaleRotateIn .vc_gitem-zone-b {
-      background-color: #777AF2!important;
-  }
-
-  .play-btn-primary-color .play-video:hover,.play-btn-primary-color .play-video,.play-btn-primary-color.play-video:hover,.play-btn-primary-color.play-video,.feature-sections-wrapper .feature-sections-tabs .nav-tabs li.active a,.pricing-table.active,.key-icon-box:hover .ib-wrapper,.modal-content-inner .wpcf7-not-valid-tip,.section .wpcf7-mail-sent-ok,.toggle-map-info:hover,#main-menu.background-dropdown-effect .navbar-nav .menu-item-has-children .dropdown-menu a:hover,.background-dropdown-effect .navbar-nav .menu-item-has-children .dropdown-menu a:hover,.blog-header-form .wpcf7-mail-sent-ok,.blog-header-form .wpcf7-not-valid-tip,.section .wpcf7-not-valid-tip,.kd-side-panel .wpcf7-not-valid-tip,.kd-process-steps.process-checkbox-template .pss-item:before,.kd-process-steps.process-checkbox-template,.kd-separator,.kd-separator .kd-separator-line {
-      border-color: #777AF2;
-  }
-
-  .timeline-item-wrapper.full-link-card:hover + .timeline-item-arrow + .timeline-item-point,.fm-wrapper .fm-list li.active a,.fm-wrapper .fm-list li a:hover,.pricing .pricing-price.sale-yes .pt-normal-price:after,#cookie-notice .cn-button,.theme-sway .select2-container--default .select2-results__option--highlighted[aria-selected],.theme-sway .select2-container--default .select2-results__option--highlighted[data-selected],#product-content .blog-social-sharing a:hover,.modal-content-contact .redux-social-media-list a:hover,.kd-icon-wrapper.icon-square,.feature-sections-wrapper .feature-sections-tabs .nav-tabs a:before,.kd-panel-subtitle ul>li:before,.tab-text-container ul>li:before,.side-content-text ul>li:before,.wpb_text_column ul>li:before,.scroll-down-wrapper a,.video-modal .modal-content .close:hover,#single-page .bbp-login-form .user-submit,.bbpress #user-submit,.gform_wrapper .gform_footer input.button,.gform_wrapper .gform_footer input[type=submit],input[type="button"].ninja-forms-field,.modal-content-inner .wpcf7-submit:hover,.searchform #searchsubmit,#kd-slider,.kd-contact-form.light_background .wpcf7 .wpcf7-submit,.footer-newsletter-form .wpcf7 .wpcf7-submit,.kd_progressbarfill,.phone-wrapper,.kd-process-steps.process-number-template ul li .pss-container:before,.wpb_wrapper #loginform .button,.email-wrapper,.footer-business-info.footer-socials a:hover,.parallax.with-overlay:after,.content-area .vc_grid-filter>.vc_grid-filter-item span:after,.tt_button.tt_secondary_button:hover,.pricing-table .tt_button:hover,.modal-content-inner .wpcf7-not-valid-tip,.kd-side-panel .wpcf7-not-valid-tip,.tt_button.second-style:hover,.pricing-table.active .tt_button,#customizer .screenshot a,.heading-separator,.content-area .vc_grid-item-mini .vc_gitem-zone-c .vc_gitem_row .vc_gitem-col h4:before,.features-tabs .tab-controls li:after,.features-tabs li .tab-text-container:before,.blog-header-form .wpcf7-not-valid-tip,.section .wpcf7-not-valid-tip,.port-prev.tt_button:hover,.port-next.tt_button:hover,.owl-buttons div:hover,.row .vc_toggle_default .vc_toggle_icon,.row .vc_toggle_default .vc_toggle_icon::after,.row .vc_toggle_default .vc_toggle_icon::before,.upper-footer .modal-menu-item:hover,.contact-map-container .toggle-map,.life-item .life-content,.tt_button,.owl-dot span,.pricing .secondary-button.secondary-button-inverse:hover,.with-overlay .parallax-overlay,.secondary-button.secondary-button-inverse:hover,.secondary-button,#kd-slider .bullet-bar.tparrows,.primary-button.button-inverse,#posts-content .post input[type="submit"],.btn-xl,.with-overlay,.vc_grid-item-mini .vc_gitem-zone .vc_btn3.vc_btn3-style-custom:hover,.separator,.cb-container.cb_main_color:hover,.keydesign-cart .buttons .btn:hover,#single-page #comments input[type="submit"]:hover,.contact-map-container .toggle-map:hover,.wpcf7 .wpcf7-submit:hover,.owl-dot span,.features-tabs .tab.active,.pricing-table.DetailedStyle.active .pricing-title .pricing-title-content,.content-area .vc_grid .vc-gitem-zone-height-mode-auto.vc_gitem-zone.vc_gitem-zone-a:before,.row .vc_toggle_simple .vc_toggle_title:hover .vc_toggle_icon::after,.row .vc_toggle_simple .vc_toggle_title:hover .vc_toggle_icon::before,.wpcf7 .wpcf7-submit,.navigation.pagination .next:hover,#single-page .vc_col-sm-3 .wpcf7 .wpcf7-submit,.spinner:before,.toggle-map-info:hover,.content-area .vc_grid .vc_gitem-zone-c .vc_general:hover,.content-area .vc_grid-item-mini .vc_gitem-animate-fadeIn .vc_gitem-zone.vc_gitem-zone-a:before,.keydesign-cart .badge,.header-wishlist .badge,.tags a:after,.tagcloud a:after,.post .entry-categories a:before,.life .entry-categories a:before,div.wpcf7 .wpcf7-form .ajax-loader,#bbp_search_submit,.bbp-submit-wrapper .button,div.wpforms-container-full .wpforms-form input[type=submit],div.wpforms-container-full .wpforms-form button[type=submit],.comparison-pricing-table .vc_custom_heading.active,.comparison-pricing-table .pricing-row.active,#commentform #submit,footer.underline-effect .textwidget a:after,footer.underline-effect .navbar-footer li a:after,footer.underline-effect .footer_widget .menu li a:after,#main-menu.underline-effect .navbar-nav .mega-menu .dropdown-menu .menu-item a:after,#main-menu.underline-effect .navbar-nav .menu-item .dropdown-menu .menu-item a:after,.kd-process-steps.process-checkbox-template .pss-step-number span:before,.kd-process-steps.process-checkbox-template .pss-step-number:before,.kd-process-steps.process-checkbox-template .pss-item:before,.blog-page-numbers li.active a,.owl-nav div.owl-next:hover,.owl-nav div.owl-prev:hover,.content-area .vc_basic_grid .vc_grid .blog-detailed-grid .vc_gitem-post-category-name a:hover,.tags a:before,.tagcloud a:before,.kd-price-switch .price-slider,.team-member.design-classic .kd-team-contact .kd-team-email:before,.team-member.design-classic .kd-team-contact .kd-team-phone:before,.team-member.design-creative .team-image:before,.ib-hover-2.key-icon-box:hover .ib-wrapper,.team-member.design-classic .team-socials a:hover,.tags a:hover,.tagcloud a:hover,.tags-label:hover,.post .entry-categories a:hover,.life .entry-categories a:hover,.blog_widget ul.redux-social-media-list li a:hover,.kd-title-label .kd-title-label-transparent::before,.kd-title-label .kd-title-label-solid::before,.rebar-wrapper .rebar-element,.jr-insta-thumb ul.thumbnails li a:after,.wpb-js-composer .vc_tta-container .vc_tta.vc_tta-style-classic.vc_tta-tabs-position-top .vc_tta-tabs-container .vc_tta-tabs-list li.vc_active a:before,.cb-container .cb-wrapper:after,.content-area .vc_basic_grid .vc_grid .blog-detailed-grid .vc_gitem-post-category-name a:before,.team-member.design-classic .team-socials a:after,.navigation.pagination .prev:hover,.kd-shapes.shape_dots,.cd-handle,.timeline-item-wrapper.full-link-card .timeline-full-link:hover,.feature-sections-wrapper .feature-sections-tabs .nav-tabs a .nav-number,#landing-page .demos-section .kd-photobox h5:before,.kd-panel-phone:hover,.kd-panel-email:hover,.kd-panel-social-list .redux-social-media-list a:hover,footer.underline-effect .footer_widget ul li.cat-item a:after,.play-btn-primary-color .play-video,.theme-sway .cn-button.bootstrap,.wp-block-button__link {
-      background-color: #777AF2;
-  }
-
-  .hovereffect {
-    width:100%;
-    height:100%;
-    float:left;
-    overflow:hidden;
-    position:relative;
-    text-align:center;
-    cursor:default;
-    }
-
-    .hovereffect .overlay {
-    width:100%;
-    height:100%;
-    position:absolute;
-    overflow:hidden;
-    top:0;
-    left:0;
-    opacity:0;
-    background-color:rgba(0,0,0,0.5);
-    -webkit-transition:all .4s ease-in-out;
-    transition:all .4s ease-in-out
-    }
-
-    .hovereffect img {
-    display:block;
-    position:relative;
-    -webkit-transition:all .4s linear;
-    transition:all .4s linear;
-    }
-
-    .hovereffect h2 {
-    text-transform:uppercase;
-    color:#fff;
-    text-align:center;
-    position:relative;
-    font-size:17px;
-    background:rgba(0,0,0,0.6);
-    -webkit-transform:translatey(-100px);
-    -ms-transform:translatey(-100px);
-    transform:translatey(-100px);
-    -webkit-transition:all .2s ease-in-out;
-    transition:all .2s ease-in-out;
-    padding:10px;
-    }
-
-    .hovereffect a.info {
-    text-decoration:none;
-    display:inline-block;
-    text-transform:uppercase;
-    color:#fff;
-    border:1px solid #fff;
-    background-color:transparent;
-    opacity:0;
-    filter:alpha(opacity=0);
-    -webkit-transition:all .2s ease-in-out;
-    transition:all .2s ease-in-out;
-    margin:50px 0 0;
-    padding:7px 14px;
-    }
-
-    .hovereffect a.info:hover {
-    box-shadow:0 0 5px #fff;
-    }
-
-    .hovereffect:hover img {
-    -ms-transform:scale(1.2);
-    -webkit-transform:scale(1.2);
-    transform:scale(1.2);
-    }
-
-    .hovereffect:hover .overlay {
-    opacity:1;
-    filter:alpha(opacity=100);
-    }
-
-    .hovereffect:hover h2,.hovereffect:hover a.info {
-    opacity:1;
-    filter:alpha(opacity=100);
-    -ms-transform:translatey(0);
-    -webkit-transform:translatey(0);
-    transform:translatey(0);
-    }
-
-    .hovereffect:hover a.info {
-    -webkit-transition-delay:.2s;
-    transition-delay:.2s;
-    }
-
 /* --------------------------------
       Blogs section
 ------------------------------- */
 
   .blog-article{
     height: fit-content;
+  }
+
+  .justify-text {
+      text-align: justify;
   }
