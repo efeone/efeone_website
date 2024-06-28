@@ -34,7 +34,7 @@ function loadjobs() {
                             </div>
                             <div class="col-sm-12 col-md-3 d-flex flex-column align-items-start align-items-md-end justify-content-center">
                                 <div class="d-flex mb-3">
-                                    <a class="btn btn-primary" href="https://jalebi.efeone.com/job_application/new?job_title=${result.name}">Apply Now</a>
+                                    <a class="btn btn-primary" href="https://jalebi.efeone.com/jobs">Apply Now</a>
                                 </div>
                             </div>
                         </div>
@@ -42,9 +42,6 @@ function loadjobs() {
                 </div>
             </div>
         </div>`
-
-
-          // Append newyly created card element to the container
           container.innerHTML += content;
         })
       }
