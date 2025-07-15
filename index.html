@@ -53,7 +53,7 @@
                 </ul>
               </li>
           <li><a class="nav-link scrollto" href="careers.html">Careers</a></li>
-          <li><a class="nav-link scrollto" href="index.html#contact_section">Contact</a></li>
+          <li><a class="nav-link scrollto" href="#contact_section">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -309,37 +309,42 @@
     </section>
 
     <!-- ======= Life @ efeone Section ======= -->
-    <section id="life" class="life">
-      <div class="container">
-
-        <div class="section-title" data-aos="fade-up">
+     <section id="life" class="life">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
           <h2>Life @ efeone</h2>
         </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6 col-sm-6 col-xs-12" data-aos="fade-up" style="padding-top: 4%; padding-left: 15%; padding-bottom: 3%;"><img
-                class="img-responsive" src="assets/img/efeone.jpg" alt="retail_img4" width="75%"
-                style="border-radius: 30px;"></div>
-            <div class="col-md-6 col-sm-6 col-xs-12" data-aos="fade-up">
-              <p style="text-align: justify;">At Efeone, employees can expect a workplace that values equality and
-                diversity. While a hierarchical structure exists, all employees' opinions are respected and treated
-                equally. The company fosters an innovative and interactive environment, where colleagues from different
-                backgrounds and skillsets exchange ideas. This provides employees with a lot of opportunities for
-                personal and professional growth.
-                The atmosphere at Efeone is positive, and the company culture is inclusive and supportive. The company
-                provides ongoing training and educational programs to keep up with emerging trends and technologies.
-                Employees can expect to develop their qualities and work alongside a fantastic team that is always
-                supportive.
-                Starting a career at Efeone can be the beginning of a new journey, offering a change from a mechanical
-                way of life to a technical one. Employees have the opportunity to work in a great environment, develop
-                friendships, and gain valuable values. The team at Efeone is always cooperative, even with novice
-                employees in the software industry, providing opportunities to manage various duties.</p>
+
+        <div class="row align-items-center gx-4 gy-4" style="padding: 20px;">
+          <!-- Slider column -->
+          <div class="col-lg-6 d-flex justify-content-center">
+            <div class="slider">
+              <div class="slides" id="efeoneSlides"></div>
             </div>
-             </p>
+          </div>
+
+          <!-- Text content column -->
+          <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
+            <p style="text-align: justify;">
+              At Efeone, employees can expect a workplace that values equality and
+              diversity. While a hierarchical structure exists, all employees' opinions are respected and treated
+              equally. The company fosters an innovative and interactive environment, where colleagues from different
+              backgrounds and skillsets exchange ideas. This provides employees with a lot of opportunities for
+              personal and professional growth.
+              The atmosphere at Efeone is positive, and the company culture is inclusive and supportive. The company
+              provides ongoing training and educational programs to keep up with emerging trends and technologies.
+              Employees can expect to develop their qualities and work alongside a fantastic team that is always
+              supportive.
+              Starting a career at Efeone can be the beginning of a new journey, offering a change from a mechanical
+              way of life to a technical one. Employees have the opportunity to work in a great environment, develop
+              friendships, and gain valuable values. The team at Efeone is always cooperative, even with novice
+              employees in the software industry, providing opportunities to manage various duties.
+            </p>
           </div>
         </div>
       </div>
     </section>
+
     <!-- =========== Life @ efeone  Section ============== -->
 
 
@@ -410,34 +415,39 @@
             </div>
           </div>
 
-          <div class="col-lg-5 col-md-12" data-aos="fade-up" data-aos-delay="300">
-            <!-- <form action="forms/contact.php" method="post" role="form" class="php-email-form"> -->
+    <div class="col-lg-5 col-md-12" data-aos="fade-up" data-aos-delay="300">
+  <!-- Success Message Box -->
+            <div id="custom-alert" style="display: none; background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; padding: 12px 16px; border-radius: 6px; font-size: 15px; font-weight: 500; margin-bottom: 15px;">
+              Your message has been sent successfully! , we will get back to you soon.
+            </div>
+
+            <!-- Contact Form Fields -->
             <div class="form-group" style="padding-top: 10px;">
-              <input type="text" name="name" class="form-control" id="c_name" placeholder="Your Name" required>
+              <input type="text" name="name" class="form-control" id="c_name" placeholder="Your Name" required style="border-radius: 5px;">
             </div>
             <div class="form-group" style="padding-top: 10px;">
-              <input type="email" class="form-control" name="email" id="c_email" placeholder="Your Email" required>
+              <select class="form-control" name="subject" id="c_subject" required style="border-radius: 5px;">
+                <option value="" disabled selected hidden>Select a subject</option>
+                <option value="General Inquiry">Sales</option>
+                <option value="Order Issue">Support</option>
+                <option value="Product Info">ERPNext Implementation</option>
+                <option value="Feedback">Business Consultant</option>
+              </select>
             </div>
             <div class="form-group" style="padding-top: 10px;">
-              <input type="text" class="form-control" name="subject" id="c_subject" placeholder="Subject" required>
+              <input type="email" class="form-control" name="email" id="c_email" placeholder="Your Email" required style="border-radius: 5px;">
             </div>
             <div class="form-group" style="padding-top: 10px;">
-              <textarea id="c_message" class="form-control" name="message" rows="5" placeholder="Message"
-                required></textarea>
+              <textarea id="c_message" class="form-control" name="message" rows="5" placeholder="Message" required style="border-radius: 5px;"></textarea>
             </div>
             <div class="my-3" style="padding-top: 10px;">
-              <!-- <div class="loading">Loading</div> -->
-              <div class="error-message"></div>
-            </div>
-            <button class="button btn-primary rounded-2 py-2 px-4" onclick = 'sendMessage()' id="sendmessage-button" style="margin-top: 5px;
-                   background-color: #0f59f0; border-color: #007bff; border-radius: 50px; margin-bottom: 10px;">Send
-              Message</button>
-
-
+              <div class="error-message" style="color: red;"></div>
+            </div>            
+           <button
+            id="sendmessage-button" onclick="sendMessage()">Send Message
+           </button>
           </div>
-
         </div>
-
       </div>
     </section>
 
