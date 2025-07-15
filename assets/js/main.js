@@ -212,7 +212,10 @@ let sendMessage = function () {
   }
 
   $.ajax({
-    url: "https://jalebi.efeone.com/api/resource/Lead?first_name=" + name + "&email_id=" + email + "&custom_subject=" + subject + "&custom_message=" + message,
+    url: "https://jalebi.efeone.com/api/resource/Lead?first_name=" + encodeURIComponent(name) +
+         "&email_id=" + encodeURIComponent(email) +
+         "&custom_subject=" + encodeURIComponent(subject) +
+         "&custom_message=" + encodeURIComponent(message),
     type: "POST",
     headers: {
       'Accept': 'application/json',
@@ -220,13 +223,76 @@ let sendMessage = function () {
       'Authorization': 'token ffceb203fabe2fc:773041385edd49a'
     },
     success: function (response) {
-      alert("Succesfully registerd");
-      location.reload()
+      const alertBox = document.getElementById("custom-alert");
+      alertBox.style.display = "block";
+
+      document.getElementById("c_name").value = "";
+      document.getElementById("c_email").value = "";
+      document.getElementById("c_subject").selectedIndex = 0;
+      document.getElementById("c_message").value = "";
+
+      setTimeout(() => {
+        alertBox.style.display = "none";
+      }, 3000);
     },
-    error: function (xhr, status, error) {
+    error: function () {
       alert("Error while sending message");
     }
   });
 }
 
-// });
+function loadLifeSlider() {
+  jQuery.ajax({
+    url: 'https://jalebi.efeone.com/api/resource/Efeone Website Image?fields=["image_type","attachment","remarks","priority"]&filters=[["is_published","=","1"]]&order_by=priority asc',
+    type: "GET",
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json',
+      'Authorization': 'token ffceb203fabe2fc:773041385edd49a'
+    },
+    success: function (response) {
+      const images = response.data;
+      const slideContainer = document.getElementById("efeoneSlides");
+      const sliderWidth = 450;
+      let slideIndex = 0;
+      let totalSlides = images.length;
+
+      if (totalSlides === 0) return;
+
+      // Inject slides into DOM
+      images.forEach(item => {
+        const img = document.createElement("img");
+        img.src = 'https://jalebi.efeone.com'+ item.attachment || 'https://placehold.co/450x450?text=No+Image';
+        img.alt = item.remarks || "efeone image";
+        slideContainer.appendChild(img);
+      });
+
+      // Clone first slide for seamless loop
+      const firstClone = slideContainer.children[0].cloneNode(true);
+      slideContainer.appendChild(firstClone);
+
+      // Auto-slide logic
+      setInterval(() => {
+        slideIndex++;
+        slideContainer.style.transition = "transform 0.5s ease-in-out";
+        slideContainer.style.transform = `translateX(-${slideIndex * sliderWidth}px)`;
+
+        if (slideIndex === totalSlides) {
+          setTimeout(() => {
+            slideContainer.style.transition = "none";
+            slideContainer.style.transform = "translateX(0px)";
+            slideIndex = 0;
+          }, 500);
+        }
+      }, 3000);
+    },
+    error: function (err) {
+      console.error("Error loading images:", err);
+    }
+  });
+}
+
+// Call this function on DOM ready
+jQuery(document).ready(function () {
+  loadLifeSlider();
+});

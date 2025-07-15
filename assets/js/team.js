@@ -20,19 +20,23 @@ function loadteams() {
           card.classList = 'card-body';
 
           // Construct card content
+          const placeholder = 'https://placehold.co/400x400?text=No+Image';
+          let imageUrl = placeholder;
+          if (result.image && !result.image.includes('/private/')) {
+            imageUrl = `https://jalebi.efeone.com${result.image}`;
+          }
           const content = `
-
-          <div class="mt-4 col-6 col-sm-4 col-lg-2 text-center" data-aos="fade-up" style="padding: inherit;">
-          <img class="card card-md w-100" loading="lazy"  style="height: 0;
-                  padding-top: 100%;
-                  background-image: url('https://jalebi.efeone.com${result.image}');
-                  background-position: center;
-                  background-size: cover;">
-          <h6 class="mt-2">${result.employee_name}</h6>
-          <p class="text-muted" style="font-size: 0.875rem">
-          ${result.designation}
-              </p>
-              </div>`
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="1">
+              <div class="member-img">
+                <img src="${imageUrl}" alt="">
+              </div>
+              <div class="member-info">
+                <h4>${result.employee_name}</h4>
+                <span>${result.designation}</span>
+              </div>
+            </div>
+          </div>`;
 
 
               // Append newyly created card element to the container

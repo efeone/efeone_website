@@ -60,13 +60,15 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Disable AOS delay on mobile
+# Disable aos animation delay on mobile
 --------------------------------------------------------------*/
 @media screen and (max-width: 768px) {
   [data-aos-delay] {
     transition-delay: 0 !important;
   }
 }
+
+
 
 /*--------------------------------------------------------------
 # Header
@@ -1394,6 +1396,31 @@ section {
   opacity: 1;
 }
 
+.slider {
+  width: 450px;
+  height: 450px;
+  overflow: hidden;
+  border-radius: 30px;
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  height: 100%;
+  transition: transform 1s ease-in-out;
+}
+
+.slides img {
+  width: 450px;
+  height: 450px;
+  object-fit: cover;
+  object-position: center;
+  flex-shrink: 0;
+  border-radius: 30px;
+}
+
+
+
 /*--------------------------------------------------------------
 #  Details
 --------------------------------------------------------------*/
@@ -1835,6 +1862,64 @@ button:focus {
       }
   }
 /*--------------------------------------------------------------
+# Team
+--------------------------------------------------------------*/
+.team_us {
+  background: #fff;
+  padding: 80px 0;
+}
+
+.team_us .row .col-md-6 {
+  margin-bottom: 30px;
+}
+
+.team_us .member {
+  text-align: center;
+  background: #f8f9fa;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 330px;
+  width: 280px;
+}
+
+.team_us .member .member-img {
+  position: relative;
+  overflow: hidden;
+  height: 250px;
+  flex-shrink: 0; 
+}
+
+.team_us .member .member-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team_us .member .member-info {
+  padding: 10px 2px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.team_us .member .member-info h4 {
+  font-weight: 700;
+  margin-bottom: 1px;
+  font-size: 18px;
+  color: #585757;
+}
+
+.team_us .member .member-info span {
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  color: #727f8a;
+}
+
+/*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
 .contact .contact-about h3 {
@@ -1967,7 +2052,57 @@ button:focus {
 .contact .php-email-form button[type=submit]:hover {
   background: #2383c4;
 }
+/*me */
+.contact select.form-control {
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  box-shadow: none;
+  font-size: 1rem;
+  padding: 10px 15px;
+  color: #000000; 
+  background-color: #fff;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
 
+  background-image: url("data:image/svg+xml,%3Csvg width='14' height='10' viewBox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l6 6 6-6' stroke='%23495057' stroke-width='2' fill='none' fill-rule='evenodd'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 14px 10px;
+  padding-right: 40px;
+}
+
+#sendmessage-button {
+  background-color: #5faee3;
+  color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 40%;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#sendmessage-button:hover {
+  background-color: #3b6cd4;
+}
+
+.contact select.form-control option[disabled] {
+  color: #6c757d;
+  font-style: italic;
+}
+
+.contact select.form-control:invalid {
+  color: #6c757d;
+}
+
+.contact select.form-control:valid {
+  color: #000000;
+}
 @-webkit-keyframes animate-loading {
   0% {
     transform: rotate(0deg);
@@ -2085,76 +2220,98 @@ button:focus {
 ----------------------------------- */
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-/* Add a gray background color with some padding
 body {
-  font-family: Arial;
-  padding: 20px;
+  font-family: "poppins", sans-serif;
+  margin: 0;
+  padding: 0;
   background: #ffffff;
-} */
+  color: #333;
+}
 
 /* Header/Blog Title */
 .header {
-  padding: 30px;
-  font-size: 40px;
+  padding: 40px 20px;
+  font-size: 36px;
+  font-weight: 700;
   text-align: center;
-  background: white;
-  font-family: "Raleway", sans-serif;
+  background: #fff;
+  border-bottom: 1px solid #f0f0f0;
+  letter-spacing: 1px;
 }
 
-/* Create two unequal columns that floats next to each other */
-/* Left column */
+/* Layout Columns */
 .leftcolumn {
   float: left;
   width: 75%;
+  padding: 0 20px;
 }
 
-/* Right column */
 .rightcolumn {
   float: left;
-  width: 120%;
-  padding-left: 20px;
+  width: 25%;
+  padding: 0 20px;
 }
 
-/* Fake image */
-.fakeimg {
-  background-color: #fffefe;
-  width: 100%;
-  padding: 20px;
-}
-
-/* Add a card effect for articles */
+/* Card Style for Posts */
 .card {
-   background-color: white;
-   padding: 20px;
-   font-family: "Raleway", sans-serif;
-   margin-top: 20px;
-
+  background-color: #fff;
+  padding: 24px;
+  margin-top: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  border-radius: 8px;
+  transition: transform 0.2s ease;
 }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+.card:hover {
+  transform: translateY(-2px);
+}
+
+/* Fake image placeholder */
+.fakeimg {
+  background-color: #f9f9f9;
+  width: 100%;
+  padding: 16px;
+  border-radius: 6px;
+  border: 1px solid #eee;
+  margin-bottom: 15px;
+  font-style: italic;
+  color: #aaa;
+  text-align: center;
 }
 
 /* Footer */
 .footer {
   padding: 20px;
   text-align: center;
-  background: #ddd;
-  margin-top: 20px;
+  background: #f5f5f5;
+  color: #555;
+  font-size: 14px;
+  margin-top: 40px;
+  border-top: 1px solid #eaeaea;
 }
 
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+/* Responsive */
 @media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {
+  .leftcolumn,
+  .rightcolumn {
     width: 100%;
-    padding: 0;
+    padding: 0 15px;
+  }
+
+  .header {
+    font-size: 28px;
+    padding: 20px;
+  }
+
+  .card {
+    margin-top: 15px;
+    padding: 20px;
   }
 }
+
 
 /* ---------------------------------
        Career section
@@ -2410,3 +2567,90 @@ blockquote, dl, dd, h1, h2, h3, h4, h5, h6, hr, figure, p, pre {
   .justify-text {
       text-align: justify;
   }
+.blog-article {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.09);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .blog-article:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    .blog-article__image {
+      width: 100%;
+      height: 220px;
+      background-color: #f5f5f5;
+      overflow: hidden;
+    }
+
+    .blog-article__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .blog-article:hover .blog-article__image img {
+      transform: scale(1.05);
+    }
+
+    .blog-article__content {
+      padding: 25px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .blog-article__title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #3ea5d5;
+      margin-bottom: 12px;
+    }
+
+    .blog-article__title a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .blog-article__title a:hover {
+      color: #3498db;
+    }
+
+    .blog-article__description {
+      font-size: 15px;
+      color: #666;
+      flex-grow: 1;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .blog-article__info {
+      padding: 20px 25px;
+      font-size: 14px;
+      color: #999;
+      border-top: 1px solid #f0f0f0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: auto;
+    }
+
+    .blog-article__info a {
+      color: #3498db;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .blog-article__info a:hover {
+      color: #17698f;
+    }
