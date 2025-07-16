@@ -296,3 +296,12 @@ function loadLifeSlider() {
 jQuery(document).ready(function () {
   loadLifeSlider();
 });
+ 
+function dialNumber(event, number) {
+  event.preventDefault();
+  if (/Mobi|Android|iPhone/i.test(navigator.userAgent)) {
+    window.location.href = 'tel:' + number;
+  } else {
+    showHoverToast(event, "Phone call feature works only on mobile devices.");
+  }
+}

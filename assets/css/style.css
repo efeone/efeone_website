@@ -1413,7 +1413,7 @@ section {
 .slides img {
   width: 450px;
   height: 450px;
-  object-fit: cover;
+  object-fit: fill;
   object-position: center;
   flex-shrink: 0;
   border-radius: 30px;
@@ -1611,7 +1611,6 @@ button:focus {
 /*--------------------------------------------------------------
 # Journey Section
 --------------------------------------------------------------*/
-
 
   .timeline {
       position: relative;
@@ -1880,14 +1879,14 @@ button:focus {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  height: 330px;
+  height: 275px;
   width: 280px;
 }
 
 .team_us .member .member-img {
   position: relative;
   overflow: hidden;
-  height: 250px;
+  height: 200px;
   flex-shrink: 0; 
 }
 
@@ -1898,7 +1897,7 @@ button:focus {
 }
 
 .team_us .member .member-info {
-  padding: 10px 2px;
+  padding: 8px 2px;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -1908,13 +1907,13 @@ button:focus {
 .team_us .member .member-info h4 {
   font-weight: 700;
   margin-bottom: 1px;
-  font-size: 18px;
+  font-size: 15px;
   color: #585757;
 }
 
 .team_us .member .member-info span {
   display: block;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
   color: #727f8a;
 }
@@ -1929,27 +1928,28 @@ button:focus {
   line-height: 1;
   font-weight: 700;
   letter-spacing: 1px;
-  color: #222222;
+  color: #3498db;
 }
 
 .contact .contact-about p {
   font-size: 14px;
   line-height: 24px;
   font-family: "Raleway", sans-serif;
-  color: #888;
+  color: #272626;
 }
 
 .contact .social-links {
-  padding-bottom: 20px;
+  padding-bottom: 10px;
+  padding-top: 50px;
 }
 
 .contact .social-links a {
-  font-size: 18px;
+  font-size: 15px;
   display: inline-block;
   background: #fff;
   color: #3498db;
   line-height: 1;
-  padding: 8px 0;
+  padding: 8px 2px;
   margin-right: 4px;
   border-radius: 50%;
   text-align: center;
@@ -1969,10 +1969,10 @@ button:focus {
 }
 
 .contact .info i {
-  font-size: 32px;
+  font-size: 20px;
   color: #3498db;
   float: left;
-  line-height: 1;
+  line-height: 1.4;
 }
 
 .contact .info p {
@@ -2103,6 +2103,70 @@ button:focus {
 .contact select.form-control:valid {
   color: #000000;
 }
+.address-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.address-text {
+  position: relative;
+  cursor: pointer;
+}
+
+.hover-map-card {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 10px;
+  width: 300px;
+  height: 200px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  z-index: 1000;
+  display: none;
+  overflow: hidden;
+}
+
+.address-hover-trigger:hover + .hover-map-card {
+  display: block;
+}
+
+.hover-map-card iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 8px;
+}
+
+.tooltip-map {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+}
+
+.tooltip-map::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 120%; /* position above */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #222;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+.tooltip-map:hover::after {
+  opacity: 1;
+}
+
 @-webkit-keyframes animate-loading {
   0% {
     transform: rotate(0deg);

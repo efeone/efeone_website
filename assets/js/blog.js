@@ -13,7 +13,7 @@ function loadblogs() {
         container.innerHTML = ''; // Clear existing static content
 
         apiResult.forEach((result, idx) => {
-          const imageUrl = result.meta_image ? `https://jalebi.efeone.com/${result.meta_image}` : 'https://placehold.co/600x400/EEE/31343C?text=Efeone';
+          const imageUrl = result.meta_image ? `https://jalebi.efeone.com/${result.meta_image}` : 'https://placehold.co/600x400/EEE/31343C?text=efeone';
 
           const card = document.createElement('div');
           card.className = 'col-lg-4 col-md-6 mb-4'; // Use Bootstrap grid

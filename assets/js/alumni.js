@@ -19,13 +19,13 @@ function totalteams() {
           card.classList = 'card-body';
 
           // Construct card content
-          const placeholder = 'https://placehold.co/400x400?text=No+Image';
+          const placeholder = 'assets/img/profileE1.png';
           let imageUrl = placeholder;
           if (result.image && !result.image.includes('/private/')) {
             imageUrl = `https://jalebi.efeone.com${result.image}`;
           }
           const content = `
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+          <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
             <div class="member" data-aos="fade-up" data-aos-delay="1">
               <div class="member-img">
                 <img src="${imageUrl}" alt="">
