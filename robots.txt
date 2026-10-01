@@ -1,0 +1,6 @@
+# https://efeone.com
+User-agent: *
+Allow: /
+Disallow: /api/
+
+Sitemap: https://efeone.com/sitemap.xml

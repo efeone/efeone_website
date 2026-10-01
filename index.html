@@ -1,508 +1,309 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>efeone</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <!-- <link href="assets/img/favicon.png" rel="icon"> -->
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-    rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>efeone — ERPNext Implementation &amp; ERP Software in Kerala</title>
+<meta name="description" content="efeone implements, customises and supports ERPNext for manufacturers, distributors, hospitals and project businesses across Kerala and the GCC.">
+<link rel="canonical" href="https://efeone.com/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="efeone">
+<meta property="og:locale" content="en_IN">
+<meta property="og:url" content="https://efeone.com/">
+<meta property="og:title" content="efeone — ERPNext Implementation &amp; ERP Software in Kerala">
+<meta property="og:description" content="efeone implements, customises and supports ERPNext for manufacturers, distributors, hospitals and project businesses across Kerala and the GCC.">
+<meta property="og:image" content="https://efeone.com/assets/img/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="efeone — ERPNext Implementation &amp; ERP Software in Kerala">
+<meta name="twitter:description" content="efeone implements, customises and supports ERPNext for manufacturers, distributors, hospitals and project businesses across Kerala and the GCC.">
+<meta name="twitter:image" content="https://efeone.com/assets/img/og-default.png">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/css/site.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://efeone.com/#organization","name":"efeone","url":"https://efeone.com/","logo":"https://efeone.com/assets/img/efeone-logo-on-light.png","email":"info@efeone.com","description":"efeone implements, customises and supports ERPNext for manufacturers, distributors, hospitals and project businesses across Kerala and the GCC.","address":{"@type":"PostalAddress","streetAddress":"Carino INC, Pooladikkunnu","addressLocality":"Eranhikkal, Kozhikode","addressRegion":"Kerala","postalCode":"673303","addressCountry":"IN"},"sameAs":["https://www.linkedin.com/company/efeone/","https://www.instagram.com/efeone.social/","https://www.facebook.com/efeone.social"]},{"@type":"WebSite","@id":"https://efeone.com/#website","url":"https://efeone.com/","name":"efeone","publisher":{"@id":"https://efeone.com/#organization"},"inLanguage":"en-IN"},{"@type":"ProfessionalService","@id":"https://efeone.com/#localbusiness","name":"efeone","url":"https://efeone.com/","image":"https://efeone.com/assets/img/efeone-logo.png","email":"info@efeone.com","address":{"@type":"PostalAddress","streetAddress":"Carino INC, Pooladikkunnu","addressLocality":"Eranhikkal, Kozhikode","addressRegion":"Kerala","postalCode":"673303","addressCountry":"IN"},"geo":{"@type":"GeoCoordinates","latitude":11.341,"longitude":75.749},"areaServed":["Kozhikode","Kerala","India","United Arab Emirates"],"priceRange":"$$","sameAs":["https://www.linkedin.com/company/efeone/","https://www.instagram.com/efeone.social/","https://www.facebook.com/efeone.social"]}]}</script>
 </head>
-
-<body onload = 'load_main_data()'>
-
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top  header-transparent ">
-    <div class="container d-flex align-items-center justify-content-between">
-
-      <div class="logo">
-        <a href="index.html"><img src="assets/img/efeone Logo PNG (1).png" alt="" class="img-fluid"></a>
-      </div>
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto " href="index.html">Home</a></li>
-          <li><a class="nav-link scrollto" href="index.html#about">About</a></li>
-          <li><a class="nav-link scrollto" href="index.html#services">Services</a></li>
-          <li><a class="nav-link scrollto " href="blog.html">Blogs</a></li>
-          <li class="dropdown"><a href="team.html"><span>Team</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="alumni.html">Alumni</a></li>
-                </ul>
-              </li>
-          <li><a class="nav-link scrollto" href="careers.html">Careers</a></li>
-          <li><a class="nav-link scrollto" href="#contact_section">Contact</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
-    </div>
-  </header><!-- End Header -->
-  <!-- --------navbar-------- -->
-
-  </div>
-  </header>
-  <!-- =====End Header======  -->
-
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center">
-
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
-          <h1 data-aos="fade-up" style="color: #0093d2;"></h1>
-          <h6 data-aos="fade-up" style="font-size: 25px; padding-left: 26px; font-weight: 750; ">E&nbspV&nbspE&nbspR&nbspY&nbspT&nbspH&nbspI&nbspN&nbspG&nbsp&nbsp  F&nbspO&nbspR&nbsp  &nbsp
-            E&nbspV&nbspE&nbspR&nbspY&nbspO&nbspN&nbspE</h6>
-
-        </div>
-        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left" data-aos-delay="200">
-          <img src="assets/img/hero-img.png" class="img-fluid animated" alt="">
-        </div>
-      </div>
-    </div>
-
-  </section><!-- End Hero -->
-
-  <main id="main">
-
-    <!-- ======= About Us Section ======= -->
-    <section id="about" class="about">
-      <div class="container">
-
-        <div class="section-title" data-aos="fade-up">
-          <h2>About Us</h2>
-        </div>
-
-        <div class="row content">
-
-          <div class="pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="300" style="text-align: center;">
-            <p>
-              At efeone, we are driven by a commitment to enhance human living through technology. We empower our customers with
-              optimal technological solutions that deliver utmost satisfaction. Our goal is to help businesses achieve sustainable
-              growth by providing the best tools that ensure maximum returns on investment.
-              Our services are designed to simplify your work and help you stay focused on your objectives. At efeone, we believe
-              in building long-lasting, mutually beneficial relationships with our clients, and our services are always tailored to
-              meet your unique needs. With our extensive functional expertise and exposure to various business verticals, we provide
-              reliable ERP solution development and implementation assistance that enables you to operate your business with ease.
-              Our solutions are user-friendly and easy to adapt, making your experience seamless and stress-free. As a full-service
-              IT provider, efeone handles all aspects of your IT needs, so you can focus on what you do best: running your business.
-              Trust efeone to help you grow and manage your enterprise efficiently and effectively.
-            </p>
-            <!-- <a href="#" class="btn-learn-more" style="text-align: center;">Learn More</a> -->
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End About Us Section -->
-
-    <!-- ======= Features Section ======= -->
-    <section id="features" class="features">
-      <div class="container">
-
-        <div class="section-title" data-aos="fade-up">
-          <h2>What makes us Special?</h2>
-          <!-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem</p> -->
-        </div>
-
-        <div class="row" data-aos="fade-up" data-aos-delay="300">
-          <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
-            <div class="icon-box">
-              <i class="ri-gradienter-line" style="color: #ffbb2c;"></i>
-              <h3>Time Management</h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
-            <div class="icon-box">
-              <i class="ri-gradienter-line" style="color: #5578ff;"></i>
-              <h3>Problem Solving</h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
-            <div class="icon-box">
-              <i class="ri-gradienter-line" style="color: #e80368;"></i>
-              <h3>Expertise</h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
-            <div class="icon-box">
-              <i class="ri-gradienter-line" style="color: #e361ff;"></i>
-              <h3>Cost Competitiveness</h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4">
-            <div class="icon-box">
-              <i class="ri-gradienter-line" style="color: #47aeff;"></i>
-              <h3>Capability</h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4">
-            <div class="icon-box">
-              <i class="ri-gradienter-line" style="color: #ffa76e;"></i>
-              <h3>Competency</h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4">
-            <div class="icon-box">
-              <i class="ri-gradienter-line" style="color: #11dbcf;"></i>
-              <h3>Teamwork</h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4">
-            <div class="icon-box">
-              <i class="ri-gradienter-line" style="color: #4233ff;"></i>
-              <h3>Innovative</h3>
-            </div>
-          </div>
-        </div>
-    </section>
-    <!-- =========End Features Section======== -->
-
-
-    <section id="counts" class="counts">
-      <div class="container">
-
-        <div class="row">
-          <div class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-xl-start" data-aos="fade-right" data-aos-delay="150">
-            <img src="assets/img/stats-img.svg" alt="" class="img-fluid">
-          </div>
-
-          <div class="col-xl-5 d-flex align-items-stretch pt-4 pt-xl-0" data-aos="fade-left" data-aos-delay="300" style="padding-left: 10%;">
-            <div class="content d-flex flex-column justify-content-center">
-              <div class="row">
-                <div class="four col-md-7">
-                  <div class="count-box">
-                    <p id = 'customer' style="font-family: sans-serif; font-size: 40px; font-weight: 700;"></p>
-
-                    <i class="bi bi-emoji-smile"></i>
-                    <span data-purecounter-start="0"  data-purecounter-duration="1" class="purecounter"></span>
-                    <p style="font-size: 17px; font-weight: 600;"><strong> Happy Clients </strong></p>
-                  </div>
-                </div>
-
-
-              <div class="four col-md-5">
-                <div class="count-box" >
-                  <p id = 'projects' style="font-family: sans-serif; font-size: 40px; font-weight: 700;" ></p>
-                  <i class="bi bi-journal-richtext"></i>
-                <span data-purecounter-start="0"  data-purecounter-duration="1" class="purecounter"></span>
-                <p style="font-size: 17px; font-weight: 600;"><strong> Projects</strong></p>
-                </div>
-              </div>
-              <div class="four col-md-7">
-                <div class="count-box">
-                </div>
-              </div>
-                </div>
-              </div>
-
-
-       </section><!-- End Counts Section -->
-
-    <!-- ======= Services Section =======
-   <section id="services" class="services"> -->
-    <section id="services" class="services">
-      <div class="container">
-
-        <div class="section-title" data-aos="fade-up">
-          <h2>Services</h2>
-          <p>With efeone, you can list your requirements for a software product and then receive the completed product
-            with all of your criteria met and more. We are always striving to make our product more than just "Paper to
-            Digital" by improving its operations to meet your demands and introducing features that will benefit you.
-          </p>
-        </div>
-
-        <div class="row">
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-              <div class="icon"><i class="bx bxl-dribbble"></i></div>
-              <h4 class="title"><a href="">Enterprise Business Re-engineering</a></h4>
-              <p class="description">We provide provisions for optimizing business processes to improve operational
-                costs and customer service.</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
-              <div class="icon"><i class="bx bx-file"></i></div>
-              <h4 class="title"><a href="">Manufacturing</a></h4>
-              <p class="description">Enables a manufacturing company to record, analyse and reflect on employee details,
-                interactions, work order, stock, accounts etc.</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
-              <div class="icon"><i class="bx bx-tachometer"></i></div>
-              <h4 class="title"><a href="">Project Management</a></h4>
-              <p class="description">Complete module that can be used to track the progress of a project using tasks
-                timesheets etc.</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
-              <div class="icon"><i class="bx bx-tachometer"></i></div>
-              <h4 class="title"><a href="">Delivery Services</a></h4>
-              <p class="description">Integrated system available on web, android/iOS to track orders, drivers, customer
-                reviews and more.</p>
-            </div>
-          </div>
-        </div>
-        <div class="row" style="margin-top: 5%;">
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
-              <div class="icon"><i class="bx bx-tachometer"></i></div>
-              <h4 class="title"><a href="">Construction Projects</a></h4>
-              <p class="description">Easily analyse and track material consumption, employees, acccounts etc.</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
-              <div class="icon"><i class="bx bx-tachometer"></i></div>
-              <h4 class="title"><a href="">eCommerce website</a></h4>
-              <p class="description">Fully functional website with eye catching design, plethora of features and
-                database setup.</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
-              <div class="icon"><i class="bx bx-tachometer"></i></div>
-              <h4 class="title"><a href="">Distribution</a></h4>
-              <p class="description">Manage suppliers, warehouses, stocks etc using a single web application and use the
-                data to analyze the accounts.</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
-              <div class="icon"><i class="bx bx-world"></i></div>
-              <h4 class="title"><a href="">Healthcare</a></h4>
-              <p class="description">Helping healthcare practitioners, clinics and hospitals to manage healthcare
-                workflows efficiently.</p>
-            </div>
-          </div>
-        </div>
-
-
-      </div>
-    </section>
-
-    <!-- ======= Life @ efeone Section ======= -->
-     <section id="life" class="life">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
-          <h2>Life @ efeone</h2>
-        </div>
-
-        <div class="row align-items-center gx-4 gy-4" style="padding: 20px;">
-          <!-- Slider column -->
-          <div class="col-lg-6 d-flex justify-content-center">
-            <div class="slider">
-              <div class="slides" id="efeoneSlides"></div>
-            </div>
-          </div>
-
-          <!-- Text content column -->
-          <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
-            <p style="text-align: justify;">
-              At Efeone, employees can expect a workplace that values equality and
-              diversity. While a hierarchical structure exists, all employees' opinions are respected and treated
-              equally. The company fosters an innovative and interactive environment, where colleagues from different
-              backgrounds and skillsets exchange ideas. This provides employees with a lot of opportunities for
-              personal and professional growth.
-              The atmosphere at Efeone is positive, and the company culture is inclusive and supportive. The company
-              provides ongoing training and educational programs to keep up with emerging trends and technologies.
-              Employees can expect to develop their qualities and work alongside a fantastic team that is always
-              supportive.
-              Starting a career at Efeone can be the beginning of a new journey, offering a change from a mechanical
-              way of life to a technical one. Employees have the opportunity to work in a great environment, develop
-              friendships, and gain valuable values. The team at Efeone is always cooperative, even with novice
-              employees in the software industry, providing opportunities to manage various duties.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- =========== Life @ efeone  Section ============== -->
-
-
-    <!-- ======= Journey Section ======= -->
-    <section id="journey" class="features">
-      <div class="container">
-
-        <div class="section-title" data-aos="fade-up">
-          <h2>Our journey</h2>
-
-        </div>
-        <div id="efe_journey" class="container bootdey" data-aos="fade-up">
-
-        </div>
-    </section>
-    <!-- ================Journey Section===========-->
-
-
-
-    <!-- ======= Contact Section ======= -->
-    <section id='contact_section' class="contact">
-      <div class="container">
-
-        <div class="section-title" data-aos="fade-up">
-          <h2>Contact Us</h2>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="contact-about">
-              <h3>efeone</h3>
-              <p>efeone is a technology consulting company delivering cutting edge digital solutions to businesses
-                worldwide.
-                Our goal is to help businesses grow, transform and achieve their business objectives by leveraging
-                technology.
-              </p>
-              <div class="social-links">
-                <!-- <a href="#" class="twitter"><i class="bi bi-twitter"></i></a> -->
-                <a href="https://www.facebook.com/efeone.social?mibextid=ZbWKwL" class="facebook"><i class="bi bi-facebook"></i></a>
-                <a href="https://www.instagram.com/efeone.social/" class="instagram"><i class="bi bi-instagram"></i></a>
-                <a href="https://www.linkedin.com/company/efeone/" class="linkedin"><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="200">
-            <div class="info">
-  <div class="map-link-wrapper">
-  <i class="ri-map-pin-line"></i>
-  <p>
-    <a href="https://www.google.com/maps?q=Carino+INC,+Pooladikkunnu,+Eranhikkal,+Kozhikode+673303,+Kerala,+India" 
-       target="_blank" 
-       class="tooltip-map"
-       data-tooltip="Locate in Google Map">
-      No. 3/403 C, Carino INC, Pooladikkunnu<br>
-      Eranhikkal, Kozhikode - 673303<br>
-      Kerala, India
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="shell site-header__inner">
+    <a class="logo" href="index.html" aria-label="efeone home">
+      <img class="logo__img" src="assets/img/efeone-logo.png" alt="" width="730" height="168">
     </a>
-  </p>
-</div>
-
-
-  <div>
-    <i class="ri-mail-send-line"></i>
-    <p>
-      <a href="mailto:info@efeone.com" style="text-decoration: none; color: inherit;">
-        info@efeone.com
-      </a>
-    </p>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <a href="services.html">Services</a>
+          <a href="industries.html">Industries</a>
+          <a href="case-studies.html">Case studies</a>
+          <a href="blog.html">Blog</a>
+          <a href="about.html">About</a>
+      <a class="btn btn--primary site-nav__cta" href="contact.html">Talk to us</a>
+    </nav>
+    <button class="icon-btn nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+      <span class="nav-toggle__bar"></span><span class="nav-toggle__bar"></span><span class="nav-toggle__bar"></span>
+    </button>
   </div>
-
-    <div>
-    <i class="ri-phone-line"></i>
-    <p>
-      <a href="#contact_section" onclick="dialNumber(event, '9400091868')" style="text-decoration: none; color: inherit;">
-        9400091868
-      </a>
-    </p>
-    <p>
-      <a href="#contact_section" onclick="dialNumber(event, '8086833868')" style="text-decoration: none; color: inherit;">
-        8086833868
-      </a>
-    </p>
-  </div>
-</div>
+</header>
+<main id="main">
 
 
-          </div>
-
-    <div class="col-lg-5 col-md-12" data-aos="fade-up" data-aos-delay="300">
-  <!-- Success Message Box -->
-            <div id="custom-alert" style="display: none; background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; padding: 12px 16px; border-radius: 6px; font-size: 15px; font-weight: 500; margin-bottom: 15px;">
-              Your message has been sent successfully! , we will get back to you soon.
-            </div>
-
-            <!-- Contact Form Fields -->
-            <div class="form-group" style="padding-top: 10px;">
-              <input type="text" name="name" class="form-control" id="c_name" placeholder="Your Name" required style="border-radius: 5px;">
-            </div>
-            <div class="form-group" style="padding-top: 10px;">
-              <select class="form-control" name="subject" id="c_subject" required style="border-radius: 5px;">
-                <option value="" disabled selected hidden>Select a subject</option>
-                <option value="General Inquiry">Sales</option>
-                <option value="Order Issue">Support</option>
-                <option value="Product Info">ERPNext Implementation</option>
-                <option value="Feedback">Business Consultant</option>
-              </select>
-            </div>
-            <div class="form-group" style="padding-top: 10px;">
-              <input type="email" class="form-control" name="email" id="c_email" placeholder="Your Email" required style="border-radius: 5px;">
-            </div>
-            <div class="form-group" style="padding-top: 10px;">
-              <textarea id="c_message" class="form-control" name="message" rows="5" placeholder="Message" required style="border-radius: 5px;"></textarea>
-            </div>
-            <div class="my-3" style="padding-top: 10px;">
-              <div class="error-message" style="color: red;"></div>
-            </div>            
-           <button
-            id="sendmessage-button" onclick="sendMessage()">Send Message
-           </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-      <div class="row d-flex align-items-center">
-        <div class="col-lg-6 text-lg-left text-center">
-          <div class="copyright" style="padding-right: 42%;">
-            &copy; Copyright <strong>efeone</strong>. All Rights Reserved
-          </div>
-        </div>
-      </div>
+<section class="band  hero">
+  <div class="shell hero__grid">
+    <div class="hero__text">
+      <h1>ERP that fits the way your business already works</h1>
+      <p class="lede">efeone implements, customises and supports ERPNext for manufacturers, distributors, hospitals and project businesses. Open-source software, built around your process — not the other way round.</p>
+      <div class="actions"><a class="btn btn--primary" href="contact.html">Book a discovery call</a><a class="btn btn--outline" href="services.html">See all services</a></div>
     </div>
-  </footer>
-  <!-- =======End Footer======= -->
+    <div class="hero__aside">
+    <div class="glance">
+      <div class="glance__head glance__head--ink">
+        <p class="eyebrow eyebrow--inverse">What we do</p>
+      </div>
+      <div class="glance__items">
+        <div class="glance__item"><h3>Implementation</h3><p>Discovery, configuration, migration and go-live on ERPNext.</p></div>
+        <div class="glance__item"><h3>Customisation</h3><p>Custom apps, doctypes and reports for the gaps standard ERP leaves.</p></div>
+        <div class="glance__item"><h3>Integration</h3><p>Web, Android and iOS front ends on one ERP backbone.</p></div>
+        <div class="glance__item"><h3>Support &amp; AMC</h3><p>Upgrades, fixes and training after go-live.</p></div>
+      </div>
+    </div></div>
+  </div>
+</section>
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+<section class="band band--ground stat-band"><div class="shell stat-band__grid">
+      <div class="stat">
+        <p class="stat__value">6</p>
+        <p class="stat__label">Industries served</p>
+      </div>
+      <div class="stat">
+        <p class="stat__value">11-50</p>
+        <p class="stat__label">Specialists in Kozhikode</p>
+      </div></div></section>
 
-  <!-- Vendor JS Files -->
-  <!-- <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script> -->
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <!-- <script src="assets/vendor/php-email-form/validate.js"></script> -->
+<section class="band">
+  <div class="shell">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">01 / Services</p>
+        <h2>Eight services, each on its own page</h2>
+      </div>
+      <a class="link-arrow" href="services.html">All services &rarr;</a>
+    </div>
+    <div class="card-grid card-grid--4">
+      <a class="card" href="services/erpnext-implementation.html">
+        <p class="card__index">01</p>
+        <h3>ERPNext implementation</h3>
+        <p>Scoping, configuration, data migration and go-live support on ERPNext.</p>
+      </a>
+      <a class="card" href="services/erp-customisation.html">
+        <p class="card__index">02</p>
+        <h3>ERP customisation</h3>
+        <p>Custom doctypes, workflows and reports for the parts of your process standard ERP misses.</p>
+      </a>
+      <a class="card" href="services/software-development.html">
+        <p class="card__index">03</p>
+        <h3>Software development</h3>
+        <p>Web and mobile applications built on the Frappe framework and wired into your ERP.</p>
+      </a>
+      <a class="card" href="services/business-re-engineering.html">
+        <p class="card__index">04</p>
+        <h3>Business re-engineering</h3>
+        <p>Mapping and reworking how the business runs before any software is configured.</p>
+      </a>
+      <a class="card" href="services/ecommerce-development.html">
+        <p class="card__index">05</p>
+        <h3>eCommerce development</h3>
+        <p>Storefronts wired straight into live stock, pricing and accounts.</p>
+      </a>
+      <a class="card" href="services/project-management.html">
+        <p class="card__index">06</p>
+        <h3>Project management</h3>
+        <p>Tasks, timesheets, costing and progress tracked on one system.</p>
+      </a>
+      <a class="card" href="services/delivery-management.html">
+        <p class="card__index">07</p>
+        <h3>Delivery management</h3>
+        <p>Dispatch, driver apps, proof of delivery and settlement across web and mobile.</p>
+      </a>
+      <a class="card" href="services/support-amc-migration.html">
+        <p class="card__index">08</p>
+        <h3>Support, AMC &amp; migration</h3>
+        <p>Version upgrades, fixes, new reports and user support on an annual contract.</p>
+      </a></div>
+  </div>
+</section>
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/blog.js"></script>
-  <script src="assets/js/main_index.js"></script>
+<section class="band">
+  <div class="shell">
+    <p class="eyebrow">02 / Industries</p>
+    <h2>Six industries we know well enough to argue about</h2>
+    <div class="row-links">
+      <a class="row-link" href="industries/manufacturing.html">
+        <span class="row-link__index">01</span>
+        <span class="row-link__title">Manufacturing</span>
+        <span class="row-link__note">BOMs, work orders, job cards and shop-floor costing</span>
+        <span class="row-link__arrow" aria-hidden="true">&rarr;</span>
+      </a>
+      <a class="row-link" href="industries/healthcare.html">
+        <span class="row-link__index">02</span>
+        <span class="row-link__title">Healthcare</span>
+        <span class="row-link__note">Patient records, appointments, pharmacy and billing</span>
+        <span class="row-link__arrow" aria-hidden="true">&rarr;</span>
+      </a>
+      <a class="row-link" href="industries/construction.html">
+        <span class="row-link__index">03</span>
+        <span class="row-link__title">Construction</span>
+        <span class="row-link__note">Material consumption, labour, sub-contracts and site accounts</span>
+        <span class="row-link__arrow" aria-hidden="true">&rarr;</span>
+      </a>
+      <a class="row-link" href="industries/distribution.html">
+        <span class="row-link__index">04</span>
+        <span class="row-link__title">Distribution</span>
+        <span class="row-link__note">Multi-warehouse stock, supplier terms and route pricing</span>
+        <span class="row-link__arrow" aria-hidden="true">&rarr;</span>
+      </a>
+      <a class="row-link" href="industries/logistics-delivery.html">
+        <span class="row-link__index">05</span>
+        <span class="row-link__title">Logistics &amp; delivery</span>
+        <span class="row-link__note">Dispatch, driver apps, proof of delivery and settlement</span>
+        <span class="row-link__arrow" aria-hidden="true">&rarr;</span>
+      </a>
+      <a class="row-link" href="industries/project-businesses.html">
+        <span class="row-link__index">06</span>
+        <span class="row-link__title">Project businesses</span>
+        <span class="row-link__note">Estimates, milestones, billing and project profitability</span>
+        <span class="row-link__arrow" aria-hidden="true">&rarr;</span>
+      </a></div>
+  </div>
+</section>
+
+<section class="band band--ground">
+  <div class="shell">
+    <p class="eyebrow">03 / How we work</p>
+    <h2>Four stages, no surprises in month five</h2>
+    <div class="steps">
+      <div class="step">
+        <span class="step__index">01</span>
+        <h3>Discovery</h3>
+        <p>We sit with your team, map the process as it runs today, and write down what the ERP has to do.</p>
+      </div>
+      <div class="step">
+        <span class="step__index">02</span>
+        <h3>Configure and build</h3>
+        <p>Standard ERPNext first, custom code only where the standard genuinely does not fit.</p>
+      </div>
+      <div class="step">
+        <span class="step__index">03</span>
+        <h3>Migrate and train</h3>
+        <p>Clean data in, reconciled against your old system, and your people trained before cut-over.</p>
+      </div>
+      <div class="step">
+        <span class="step__index">04</span>
+        <h3>Support</h3>
+        <p>An AMC that covers upgrades, fixes and the new reports you will want by month three.</p>
+      </div></div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="shell">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">04 / Resources</p>
+        <h2>From the blog</h2>
+      </div>
+      <a class="link-arrow" href="blog.html">All articles &rarr;</a>
+    </div>
+    <div class="card-grid card-grid--3">
+      <a class="card" href="blog/erpnext-vs-odoo.html">
+        <p class="card__index">ERP selection &middot; 9 min read</p>
+        <h3>ERPNext vs Odoo: an honest comparison for mid-sized businesses</h3>
+        <p>Licensing, customisation cost and what each one is genuinely better at, from a team that implements one of them.</p>
+      </a>
+      <a class="card" href="blog/why-erp-implementations-slip.html">
+        <p class="card__index">Implementation &middot; 8 min read</p>
+        <h3>Seven reasons ERP implementations slip, and how to catch them early</h3>
+        <p>The failure patterns we see most often, the signal each one gives early, and the question that surfaces it.</p>
+      </a>
+      <a class="card" href="blog/costing-a-work-order-in-erpnext.html">
+        <p class="card__index">Manufacturing &middot; 10 min read</p>
+        <h3>Costing a work order correctly in ERPNext</h3>
+        <p>Where material, operation and overhead costs land, and why the finished-goods valuation disagrees with what the plant expects.</p>
+      </a></div>
+  </div>
+</section>
+
+
+<section class="band band--ink cta-band">
+  <div class="shell cta-band__grid">
+    <div>
+      <h2 class="h-display">Tell us what is slowing your business down.</h2>
+      <p class="lede lede--inverse">A 30-minute call, no slide deck. You describe the process; we tell you honestly whether ERPNext is the right answer.</p>
+    </div>
+    <div class="cta-band__actions">
+      <a class="btn btn--inverse" href="contact.html">Book a discovery call</a>
+      <a class="btn btn--outline-inverse" href="mailto:info@efeone.com">info@efeone.com</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="shell site-footer__grid">
+    <div class="site-footer__brand">
+      <div class="logo"><img class="logo__img" src="assets/img/efeone-logo.png" alt="efeone — everything for everyone" width="730" height="168"></div>
+      <address>
+        Carino INC, Pooladikkunnu<br>
+        Eranhikkal, Kozhikode 673303<br>
+        Kerala, India<br>
+        <a href="mailto:info@efeone.com">info@efeone.com</a>
+        
+      </address>
+    </div>
+    
+      <div class="site-footer__col">
+        <p class="eyebrow eyebrow--inverse">Services</p>
+        <div class="site-footer__links">
+          <a href="services/erpnext-implementation.html">ERPNext implementation</a>
+          <a href="services/erp-customisation.html">ERP customisation</a>
+          <a href="services/software-development.html">Software development</a>
+          <a href="services/ecommerce-development.html">eCommerce development</a>
+          <a href="services/support-amc-migration.html">Support, AMC & migration</a>
+        </div>
+      </div>
+      <div class="site-footer__col">
+        <p class="eyebrow eyebrow--inverse">Industries</p>
+        <div class="site-footer__links">
+          <a href="industries/manufacturing.html">Manufacturing</a>
+          <a href="industries/healthcare.html">Healthcare</a>
+          <a href="industries/construction.html">Construction</a>
+          <a href="industries/distribution.html">Distribution</a>
+          <a href="industries/logistics-delivery.html">Logistics & delivery</a>
+        </div>
+      </div>
+      <div class="site-footer__col">
+        <p class="eyebrow eyebrow--inverse">Company</p>
+        <div class="site-footer__links">
+          <a href="about.html">About us</a>
+          <a href="team.html">Team</a>
+          <a href="careers.html">Careers</a>
+          <a href="alumni.html">Alumni</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+  </div>
+  <div class="shell site-footer__legal">
+    <span>&copy; 2026 efeone. All rights reserved.</span>
+    <div class="site-footer__meta">
+      <a href="privacy-policy.html">Privacy policy</a>
+      <a href="https://www.linkedin.com/company/efeone/" rel="noopener">LinkedIn</a>
+      <a href="https://www.instagram.com/efeone.social/" rel="noopener">Instagram</a>
+      <a href="https://www.facebook.com/efeone.social" rel="noopener">Facebook</a>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/site.js" defer></script>
 </body>
-
 </html>

@@ -1,107 +1,158 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>efeone</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-
-  <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Raleway:300,400,600,700|Poppins:300,400,500,600,700"
-    rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Main CSS -->
-  <link href="assets/css/style.css" rel="stylesheet">
-
-  <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>ERP &amp; ERPNext Articles | efeone Blog</title>
+<meta name="description" content="Practical articles on ERPNext, ERP selection, implementation and manufacturing configuration, written by the efeone team in Kozhikode.">
+<link rel="canonical" href="https://efeone.com/blog.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="efeone">
+<meta property="og:locale" content="en_IN">
+<meta property="og:url" content="https://efeone.com/blog.html">
+<meta property="og:title" content="ERP &amp; ERPNext Articles | efeone Blog">
+<meta property="og:description" content="Practical articles on ERPNext, ERP selection, implementation and manufacturing configuration, written by the efeone team in Kozhikode.">
+<meta property="og:image" content="https://efeone.com/assets/img/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ERP &amp; ERPNext Articles | efeone Blog">
+<meta name="twitter:description" content="Practical articles on ERPNext, ERP selection, implementation and manufacturing configuration, written by the efeone team in Kozhikode.">
+<meta name="twitter:image" content="https://efeone.com/assets/img/og-default.png">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/css/site.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://efeone.com/#organization","name":"efeone","url":"https://efeone.com/","logo":"https://efeone.com/assets/img/efeone-logo-on-light.png","email":"info@efeone.com","description":"efeone implements, customises and supports ERPNext for manufacturers, distributors, hospitals and project businesses across Kerala and the GCC.","address":{"@type":"PostalAddress","streetAddress":"Carino INC, Pooladikkunnu","addressLocality":"Eranhikkal, Kozhikode","addressRegion":"Kerala","postalCode":"673303","addressCountry":"IN"},"sameAs":["https://www.linkedin.com/company/efeone/","https://www.instagram.com/efeone.social/","https://www.facebook.com/efeone.social"]},{"@type":"WebSite","@id":"https://efeone.com/#website","url":"https://efeone.com/","name":"efeone","publisher":{"@id":"https://efeone.com/#organization"},"inLanguage":"en-IN"},{"@type":"Blog","@id":"https://efeone.com/blog.html#blog","url":"https://efeone.com/blog.html","name":"efeone blog","publisher":{"@id":"https://efeone.com/#organization"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://efeone.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://efeone.com/blog.html"}]}]}</script>
 </head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="shell site-header__inner">
+    <a class="logo" href="index.html" aria-label="efeone home">
+      <img class="logo__img" src="assets/img/efeone-logo.png" alt="" width="730" height="168">
+    </a>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <a href="services.html">Services</a>
+          <a href="industries.html">Industries</a>
+          <a href="case-studies.html">Case studies</a>
+          <a href="blog.html" aria-current="page">Blog</a>
+          <a href="about.html">About</a>
+      <a class="btn btn--primary site-nav__cta" href="contact.html">Talk to us</a>
+    </nav>
+    <button class="icon-btn nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+      <span class="nav-toggle__bar"></span><span class="nav-toggle__bar"></span><span class="nav-toggle__bar"></span>
+    </button>
+  </div>
+</header><nav class="crumbs" aria-label="Breadcrumb"><div class="shell"><a href="index.html">Home</a><span class="crumbs__sep" aria-hidden="true">/</span><span aria-current="page">Blog</span></div></nav>
+<main id="main">
 
-<body onload="loadblogs()">
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top header-transparent">
-    <div class="container d-flex align-items-center justify-content-between">
-      <div class="logo">
-        <a href="index.html"><img src="assets/img/efeone Logo PNG (1).png" alt="efeone logo" class="img-fluid"></a>
-      </div>
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto" href="index.html">Home</a></li>
-          <li><a class="nav-link scrollto" href="index.html#about">About</a></li>
-          <li><a class="nav-link scrollto" href="index.html#services">Services</a></li>
-          <li><a class="nav-link scrollto active" href="blog.html">Blogs</a></li>
-          <li class="dropdown"><a href="team.html"><span>Team</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="alumni.html">Alumni</a></li>
-            </ul>
-          </li>
-          <li><a class="nav-link scrollto" href="careers.html">Careers</a></li>
-          <li><a class="nav-link scrollto" href="index.html#contact_section">Contact</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav>
+<section class="band  hero">
+  <div class="shell ">
+    <div class="hero__text">
+      <p class="eyebrow">Blog</p>
+      <h1>Writing about ERP, ERPNext and the work around it</h1>
+      <p class="lede">Practical articles from the implementations we run — platform comparisons, configuration detail, and the patterns behind projects that go wrong.</p>
+      
     </div>
-  </header>
-  <!-- End Header -->
+    
+  </div>
+</section>
 
-  <!-- ======= Blog Section ======= -->
-  <section id="blog" class="features" style="padding-top: 120px;">
-    <div class="container">
-      <div class="section-title" data-aos="fade-up">
-        <h2>Blogs</h2>
-        <p>Our bloggers truly bring their personal experiences as well as keep an eye out for the technological
-          advancements and break it down to simple notions.</p>
-      </div>
+<section class="band">
+  <div class="shell"><div class="card-grid card-grid--3">
+      <a class="card card--post" href="blog/erpnext-vs-odoo.html">
+        <p class="card__index">ERP selection &middot; 9 min read</p>
+        <h2>ERPNext vs Odoo: an honest comparison for mid-sized businesses</h2>
+        <p>Licensing, customisation cost and what each one is genuinely better at, from a team that implements one of them.</p>
+        <p class="card__date"><time datetime="2026-09-08">8 Sept 2026</time></p>
+      </a>
+      <a class="card card--post" href="blog/why-erp-implementations-slip.html">
+        <p class="card__index">Implementation &middot; 8 min read</p>
+        <h2>Seven reasons ERP implementations slip, and how to catch them early</h2>
+        <p>The failure patterns we see most often, the signal each one gives early, and the question that surfaces it.</p>
+        <p class="card__date"><time datetime="2026-09-17">17 Sept 2026</time></p>
+      </a>
+      <a class="card card--post" href="blog/costing-a-work-order-in-erpnext.html">
+        <p class="card__index">Manufacturing &middot; 10 min read</p>
+        <h2>Costing a work order correctly in ERPNext</h2>
+        <p>Where material, operation and overhead costs land, and why the finished-goods valuation disagrees with what the plant expects.</p>
+        <p class="card__date"><time datetime="2026-09-24">24 Sept 2026</time></p>
+      </a></div></div>
+</section>
 
-      <div class="row" id="blogs">
-        <!-- Blog cards will be loaded here dynamically -->
-      </div>
+
+<section class="band band--ink cta-band">
+  <div class="shell cta-band__grid">
+    <div>
+      <h2 class="h-display">Tell us what is slowing your business down.</h2>
+      <p class="lede lede--inverse">A 30-minute call, no slide deck. You describe the process; we tell you honestly whether ERPNext is the right answer.</p>
     </div>
-  </section>
-  <!-- End Blog Section -->
+    <div class="cta-band__actions">
+      <a class="btn btn--inverse" href="contact.html">Book a discovery call</a>
+      <a class="btn btn--outline-inverse" href="mailto:info@efeone.com">info@efeone.com</a>
+    </div>
+  </div>
+</section>
+</main>
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-      <div class="row d-flex align-items-center">
-        <div class="col-lg-6 text-lg-left text-center">
-          <div class="copyright">
-            &copy; Copyright <strong>efeone</strong>. All Rights Reserved
-          </div>
+<footer class="site-footer">
+  <div class="shell site-footer__grid">
+    <div class="site-footer__brand">
+      <div class="logo"><img class="logo__img" src="assets/img/efeone-logo.png" alt="efeone — everything for everyone" width="730" height="168"></div>
+      <address>
+        Carino INC, Pooladikkunnu<br>
+        Eranhikkal, Kozhikode 673303<br>
+        Kerala, India<br>
+        <a href="mailto:info@efeone.com">info@efeone.com</a>
+        
+      </address>
+    </div>
+    
+      <div class="site-footer__col">
+        <p class="eyebrow eyebrow--inverse">Services</p>
+        <div class="site-footer__links">
+          <a href="services/erpnext-implementation.html">ERPNext implementation</a>
+          <a href="services/erp-customisation.html">ERP customisation</a>
+          <a href="services/software-development.html">Software development</a>
+          <a href="services/ecommerce-development.html">eCommerce development</a>
+          <a href="services/support-amc-migration.html">Support, AMC & migration</a>
         </div>
       </div>
+      <div class="site-footer__col">
+        <p class="eyebrow eyebrow--inverse">Industries</p>
+        <div class="site-footer__links">
+          <a href="industries/manufacturing.html">Manufacturing</a>
+          <a href="industries/healthcare.html">Healthcare</a>
+          <a href="industries/construction.html">Construction</a>
+          <a href="industries/distribution.html">Distribution</a>
+          <a href="industries/logistics-delivery.html">Logistics & delivery</a>
+        </div>
+      </div>
+      <div class="site-footer__col">
+        <p class="eyebrow eyebrow--inverse">Company</p>
+        <div class="site-footer__links">
+          <a href="about.html">About us</a>
+          <a href="team.html">Team</a>
+          <a href="careers.html">Careers</a>
+          <a href="alumni.html">Alumni</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+  </div>
+  <div class="shell site-footer__legal">
+    <span>&copy; 2026 efeone. All rights reserved.</span>
+    <div class="site-footer__meta">
+      <a href="privacy-policy.html">Privacy policy</a>
+      <a href="https://www.linkedin.com/company/efeone/" rel="noopener">LinkedIn</a>
+      <a href="https://www.instagram.com/efeone.social/" rel="noopener">Instagram</a>
+      <a href="https://www.facebook.com/efeone.social" rel="noopener">Facebook</a>
     </div>
-  </footer>
-  <!-- End Footer -->
-
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/blog.js"></script>
+  </div>
+</footer>
+<script src="assets/js/site.js" defer></script>
 </body>
 </html>
