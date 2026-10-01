@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>How to Cost a Work Order Correctly in ERPNext | efeone</title>
+<meta name="description" content="Where material, operation and overhead cost land on an ERPNext work order, why the finished-goods valuation disagrees with expectations, and how to fix it.">
+<link rel="canonical" href="https://efeone.com/blog/costing-a-work-order-in-erpnext.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="efeone">
+<meta property="og:locale" content="en_IN">
+<meta property="og:url" content="https://efeone.com/blog/costing-a-work-order-in-erpnext.html">
+<meta property="og:title" content="How to Cost a Work Order Correctly in ERPNext | efeone">
+<meta property="og:description" content="Where material, operation and overhead cost land on an ERPNext work order, why the finished-goods valuation disagrees with expectations, and how to fix it.">
+<meta property="og:image" content="https://efeone.com/assets/img/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to Cost a Work Order Correctly in ERPNext | efeone">
+<meta name="twitter:description" content="Where material, operation and overhead cost land on an ERPNext work order, why the finished-goods valuation disagrees with expectations, and how to fix it.">
+<meta name="twitter:image" content="https://efeone.com/assets/img/og-default.png">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../assets/css/site.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://efeone.com/#organization","name":"efeone","url":"https://efeone.com/","logo":"https://efeone.com/assets/img/efeone-logo-on-light.png","email":"info@efeone.com","description":"efeone implements, customises and supports ERPNext for manufacturers, distributors, hospitals and project businesses across Kerala and the GCC.","address":{"@type":"PostalAddress","streetAddress":"Carino INC, Pooladikkunnu","addressLocality":"Eranhikkal, Kozhikode","addressRegion":"Kerala","postalCode":"673303","addressCountry":"IN"},"sameAs":["https://www.linkedin.com/company/efeone/","https://www.instagram.com/efeone.social/","https://www.facebook.com/efeone.social"]},{"@type":"WebSite","@id":"https://efeone.com/#website","url":"https://efeone.com/","name":"efeone","publisher":{"@id":"https://efeone.com/#organization"},"inLanguage":"en-IN"},{"@type":"BlogPosting","@id":"https://efeone.com/blog/costing-a-work-order-in-erpnext.html#article","headline":"Costing a work order correctly in ERPNext","description":"Where material, operation and overhead cost land on an ERPNext work order, why the finished-goods valuation disagrees with expectations, and how to fix it.","datePublished":"2026-09-24","dateModified":"2026-09-24","url":"https://efeone.com/blog/costing-a-work-order-in-erpnext.html","author":{"@id":"https://efeone.com/#organization"},"publisher":{"@id":"https://efeone.com/#organization"},"mainEntityOfPage":"https://efeone.com/blog/costing-a-work-order-in-erpnext.html","articleSection":"Manufacturing","inLanguage":"en-IN"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://efeone.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://efeone.com/blog.html"},{"@type":"ListItem","position":3,"name":"Costing a work order correctly in ERPNext","item":"https://efeone.com/blog/costing-a-work-order-in-erpnext.html"}]}]}</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="shell site-header__inner">
+    <a class="logo" href="../index.html" aria-label="efeone home">
+      <img class="logo__img" src="../assets/img/efeone-logo.png" alt="" width="730" height="168">
+    </a>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <a href="../services.html">Services</a>
+          <a href="../industries.html">Industries</a>
+          <a href="../case-studies.html">Case studies</a>
+          <a href="../blog.html" aria-current="page">Blog</a>
+          <a href="../about.html">About</a>
+      <a class="btn btn--primary site-nav__cta" href="../contact.html">Talk to us</a>
+    </nav>
+    <button class="icon-btn nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+      <span class="nav-toggle__bar"></span><span class="nav-toggle__bar"></span><span class="nav-toggle__bar"></span>
+    </button>
+  </div>
+</header><nav class="crumbs" aria-label="Breadcrumb"><div class="shell"><a href="../index.html">Home</a><span class="crumbs__sep" aria-hidden="true">/</span><a href="../blog.html">Blog</a><span class="crumbs__sep" aria-hidden="true">/</span><span aria-current="page">Costing a work order correctly in ERPNext</span></div></nav>
+<main id="main">
+
+<article class="band article">
+  <div class="shell shell--narrow">
+    <p class="eyebrow">Manufacturing &middot; 10 min read</p>
+    <h1>Costing a work order correctly in ERPNext</h1>
+    <p class="article__meta">
+      <time datetime="2026-09-24">24 September 2026</time>
+      <span aria-hidden="true">&middot;</span>
+      <span>efeone</span>
+    </p>
+    <div class="prose prose--article">
+      <p class="lede">&ldquo;The system says this batch cost more than it did.&rdquo; We hear this on most manufacturing sites in the first month after go-live, and the valuation is almost always right. What has gone wrong is that three separate cost streams are being compared against one remembered number.</p>
+<h2>What makes up the finished-goods value</h2>
+      <p>When a work order is completed through a manufacture stock entry, ERPNext values the finished item from three inputs: the valuation of the raw materials consumed, the operating cost from the routing, and any additional costs posted against the entry. The result is divided across the quantity produced, net of scrap.</p>
+      <p>Each of those three is calculated differently, and each has its own common configuration fault. Taking them in order explains nearly every disputed valuation we have investigated.</p>
+<h2>1. Material cost uses valuation, not the purchase rate</h2>
+      <p>The most frequent misunderstanding. Material consumed is valued at the warehouse valuation rate at the moment of consumption, not at the rate on the most recent purchase order.</p>
+      <p>Under moving average — the ERPNext default — the valuation rate is the weighted average of everything currently in that warehouse. If you bought steel at ₹52 last week and ₹61 this week, consumption is valued somewhere between the two, weighted by quantity. The shop floor, remembering the ₹61 invoice, expects ₹61.</p>
+      <p>Neither figure is wrong; they answer different questions. The valuation rate answers &ldquo;what did the material we consumed cost us&rdquo;, which is the correct basis for inventory. If you need consumption at the latest rate, that is a FIFO or batch-wise valuation decision, and it must be set per item before transactions exist. Changing valuation method on an item with history is not a configuration change — it is a repost, and it moves your general ledger.</p>
+      <p><strong>Check:</strong> run the Stock Ledger for the raw material around the consumption date and read the valuation rate column. That is the number the work order used.</p>
+<h2>2. Operating cost comes from the BOM, not from reality</h2>
+      <p>Operating cost on a work order is derived from the routing: each operation has a workstation, the workstation has an hourly rate, and the operation has a planned time. Multiply and sum.</p>
+      <p>Note what this means. Unless you are using job cards with actual time capture, the operating cost on your completed work order is the <em>planned</em> cost. If an operation that was planned at forty minutes actually took ninety, the valuation does not know.</p>
+      <p>Two configuration faults are near-universal in the first month:</p>
+      <ul>
+        <li><strong>Workstation hourly rates are left at zero.</strong> The BOM then shows a plausible material cost and no conversion cost at all, which makes every finished item look cheap. Set electricity, rent, consumable, wage and depreciation rates per workstation; they sum into the hourly rate.</li>
+        <li><strong>Operation times were copied from the quotation.</strong> Quoted times carry commercial padding. Costing times should be the realistic cycle time, and they should be revised once job cards have produced a few weeks of actuals.</li>
+      </ul>
+      <p><strong>Check:</strong> open the BOM and read the Operating Cost and Raw Material Cost totals separately. If operating cost is zero or implausibly small, the workstation rates are the cause.</p>
+<h2>3. Overhead is not automatic</h2>
+      <p>Indirect cost that is not attached to a workstation — supervision, quality, factory administration — does not reach the work order by itself. There are two sound routes.</p>
+      <p>The first is to build it into workstation hourly rates, which works when overhead is reasonably proportional to machine time. The second is to post it as an additional cost on the manufacture stock entry, which suits period charges allocated across a run.</p>
+      <p>What does not work is leaving it in a general ledger expense account and expecting product cost to include it. It will not, and the gap between your gross margin and your product costing will be exactly that amount.</p>
+<h2>Scrap, rework and the quantity denominator</h2>
+      <p>Scrap items declared on the BOM are valued and deducted from the cost pool before the finished-goods rate is calculated, which is correct: the recovered value should not be charged to good production.</p>
+      <p>The problem is undeclared scrap. If the BOM assumes a hundred units from a given input and the line routinely produces ninety-four, those six units of material cost are being carried by the ninety-four — which is arithmetically correct and strategically invisible. Your valuation absorbs the loss silently instead of reporting it.</p>
+      <p>Declare realistic process loss on the BOM. The per-unit cost will rise, and it will rise to the truth.</p>
+<h2>Reading the result</h2>
+      <p>When a valuation is disputed, work through it in this order:</p>
+      <ol>
+        <li>Open the manufacture Stock Entry and read the total incoming value and quantity produced.</li>
+        <li>Compare consumed quantities against the BOM. A difference here is a floor discipline question, not a costing one.</li>
+        <li>Check each raw material&rsquo;s valuation rate in the Stock Ledger on that date.</li>
+        <li>Read the operating cost on the work order and compare it against job-card actuals if you capture them.</li>
+        <li>Look for additional costs on the entry, and for overhead that should be there and is not.</li>
+      </ol>
+      <p>In our experience the difference is in step three or step four nine times out of ten, and the valuation is correct in nearly every case. What was wrong was the expectation — which is itself worth knowing, because it usually means the plant is quoting from a cost that does not include its own conversion.</p>
+<h2>Getting it right from the start</h2>
+      <p>Set workstation rates before the first work order, not after the first dispute. Decide the valuation method per item category during implementation, since changing it later means reposting. Put realistic times and realistic scrap on the BOM. And start capturing job cards early, even imperfectly, because planned cost without actuals eventually becomes a number nobody trusts.</p>
+    </div>
+    <div class="article__related">
+      <p class="eyebrow">Read next</p>
+      <div class="pills"><a class="pill" href="../industries/manufacturing.html">ERP for manufacturing companies<span aria-hidden="true">&rarr;</span></a><a class="pill" href="../services/erpnext-implementation.html">ERPNext implementation services<span aria-hidden="true">&rarr;</span></a></div>
+    </div>
+  </div>
+</article>
+
+
+<section class="band band--ink cta-band">
+  <div class="shell cta-band__grid">
+    <div>
+      <h2 class="h-display">Production costs that do not add up?</h2>
+      <p class="lede lede--inverse">We review manufacturing configurations and show you where the valuation and the floor disagree, and why.</p>
+    </div>
+    <div class="cta-band__actions">
+      <a class="btn btn--inverse" href="../contact.html">Book a discovery call</a>
+      <a class="btn btn--outline-inverse" href="mailto:info@efeone.com">info@efeone.com</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="shell site-footer__grid">
+    <div class="site-footer__brand">
+      <div class="logo"><img class="logo__img" src="../assets/img/efeone-logo.png" alt="efeone — everything for everyone" width="730" height="168"></div>
+      <address>
+        Carino INC, Pooladikkunnu<br>
+        Eranhikkal, Kozhikode 673303<br>
+        Kerala, India<br>
+        <a href="mailto:info@efeone.com">info@efeone.com</a>
+        
+      </address>
+    </div>
+    
+      <div class="site-footer__col">
+        <p class="eyebrow eyebrow--inverse">Services</p>
+        <div class="site-footer__links">
+          <a href="../services/erpnext-implementation.html">ERPNext implementation</a>
+          <a href="../services/erp-customisation.html">ERP customisation</a>
+          <a href="../services/software-development.html">Software development</a>
+          <a href="../services/ecommerce-development.html">eCommerce development</a>
+          <a href="../services/support-amc-migration.html">Support, AMC & migration</a>
+        </div>
+      </div>
+      <div class="site-footer__col">
+        <p class="eyebrow eyebrow--inverse">Industries</p>
+        <div class="site-footer__links">
+          <a href="../industries/manufacturing.html">Manufacturing</a>
+          <a href="../industries/healthcare.html">Healthcare</a>
+          <a href="../industries/construction.html">Construction</a>
+          <a href="../industries/distribution.html">Distribution</a>
+          <a href="../industries/logistics-delivery.html">Logistics & delivery</a>
+        </div>
+      </div>
+      <div class="site-footer__col">
+        <p class="eyebrow eyebrow--inverse">Company</p>
+        <div class="site-footer__links">
+          <a href="../about.html">About us</a>
+          <a href="../team.html">Team</a>
+          <a href="../careers.html">Careers</a>
+          <a href="../alumni.html">Alumni</a>
+          <a href="../contact.html">Contact</a>
+        </div>
+      </div>
+  </div>
+  <div class="shell site-footer__legal">
+    <span>&copy; 2026 efeone. All rights reserved.</span>
+    <div class="site-footer__meta">
+      <a href="../privacy-policy.html">Privacy policy</a>
+      <a href="https://www.linkedin.com/company/efeone/" rel="noopener">LinkedIn</a>
+      <a href="https://www.instagram.com/efeone.social/" rel="noopener">Instagram</a>
+      <a href="https://www.facebook.com/efeone.social" rel="noopener">Facebook</a>
+    </div>
+  </div>
+</footer>
+<script src="../assets/js/site.js" defer></script>
+</body>
+</html>
