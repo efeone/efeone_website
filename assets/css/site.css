@@ -1244,3 +1244,216 @@ p:last-child { margin-bottom: 0; }
 @media (prefers-reduced-motion: reduce) {
   .blog-card, .blog-card::before, .blog-card__cta { transition: none; }
 }
+
+/* ===== efx-hero: self-contained, no dependency on site.css classes ===== */
+
+.efx-hero,
+.efx-hero *,
+.efx-hero *::before,
+.efx-hero *::after {
+  box-sizing: border-box;
+}
+
+.efx-hero {
+  background: #0b0b0b;
+  color: #ffffff;
+  padding: 4.5rem 0 5rem;
+}
+
+.efx-hero__wrap {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  gap: 4rem;
+  align-items: start;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ---------- Left column ---------- */
+.efx-hero__content {
+  min-width: 0;
+}
+
+.efx-hero__kicker {
+  margin: 0 0 1.5rem;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #9a9a9a;
+}
+
+.efx-hero__title {
+  margin: 0 0 1.75rem;
+  padding: 0;
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-size: clamp(2.5rem, 5vw, 4.25rem);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  text-transform: none;
+  color: #ffffff;
+}
+
+.efx-hero__intro {
+  max-width: 38rem;
+  margin: 0 0 2.5rem;
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.65;
+  color: #cfcfcf;
+}
+
+.efx-hero__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.efx-hero__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.1rem 2rem;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.efx-hero__btn--solid {
+  background: #f4f4f4;
+  border-color: #f4f4f4;
+  color: #0b0b0b;
+}
+
+.efx-hero__btn--solid:hover {
+  background: #ffffff;
+  border-color: #ffffff;
+}
+
+.efx-hero__btn--line {
+  background: transparent;
+  border-color: #5a5a5a;
+  color: #ffffff;
+}
+
+.efx-hero__btn--line:hover {
+  border-color: #ffffff;
+}
+
+.efx-hero__btn:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
+}
+
+/* ---------- Right column ---------- */
+.efx-hero__side {
+  min-width: 0;
+  padding-top: 0.25rem;
+}
+
+.efx-card {
+  width: 100%;
+  overflow: hidden;
+  background: #131313;
+  border: 1px solid #262626;
+  border-radius: 8px;
+}
+
+.efx-card__head {
+  margin: 0;
+  padding: 1.25rem 2rem;
+  background: #161616;
+  border-bottom: 1px solid #262626;
+}
+
+.efx-card__title {
+  margin: 0;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #9a9a9a;
+}
+
+.efx-card__list {
+  margin: 0;
+  padding: 0.5rem 2rem;
+  list-style: none;
+}
+
+.efx-card__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid #262626;
+}
+
+.efx-card__row:last-child {
+  border-bottom: 0;
+}
+
+.efx-card__label,
+.efx-card__value {
+  margin: 0;
+  padding: 0;
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.4;
+}
+
+.efx-card__label {
+  font-weight: 400;
+  color: #8f8f8f;
+}
+
+.efx-card__value {
+  font-weight: 600;
+  color: #ffffff;
+  text-align: right;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .efx-hero {
+    padding: 3rem 0 3.5rem;
+  }
+  .efx-hero__wrap {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .efx-card__head,
+  .efx-card__list {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+  .efx-card__row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+  .efx-card__value {
+    text-align: left;
+  }
+  .efx-hero__btn {
+    width: 100%;
+  }
+}
