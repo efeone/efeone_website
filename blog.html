@@ -37,7 +37,7 @@
     <nav class="site-nav" id="site-nav" aria-label="Main">
       <a href="services.html">Services</a>
           <a href="industries.html">Industries</a>
-          <a href="case-studies.html">Case studies</a>
+          <!-- <a href="case-studies.html">Case studies</a> -->
           <a href="blog.html" aria-current="page">Blog</a>
           <a href="about.html">About</a>
       <a class="btn btn--primary site-nav__cta" href="contact.html">Talk to us</a>
@@ -50,10 +50,10 @@
 <main id="main">
 
 
-<section class="band  hero">
+<section class="band  hero hero--center">
   <div class="shell ">
     <div class="hero__text">
-      <p class="eyebrow">Blog</p>
+      <!-- <p class="eyebrow">Blog</p> -->
       <h1>Writing about ERP, ERPNext and the work around it</h1>
       <p class="lede">Practical articles from the implementations we run — platform comparisons, configuration detail, and the patterns behind projects that go wrong.</p>
       
@@ -62,28 +62,51 @@
   </div>
 </section>
 
-<section class="band">
-  <div class="shell"><div class="card-grid card-grid--3">
-      <a class="card card--post" href="blog/erpnext-vs-odoo.html">
-        <p class="card__index">ERP selection &middot; 9 min read</p>
-        <h2>ERPNext vs Odoo: an honest comparison for mid-sized businesses</h2>
-        <p>Licensing, customisation cost and what each one is genuinely better at, from a team that implements one of them.</p>
-        <p class="card__date"><time datetime="2026-09-08">8 Sept 2026</time></p>
-      </a>
-      <a class="card card--post" href="blog/why-erp-implementations-slip.html">
-        <p class="card__index">Implementation &middot; 8 min read</p>
-        <h2>Seven reasons ERP implementations slip, and how to catch them early</h2>
-        <p>The failure patterns we see most often, the signal each one gives early, and the question that surfaces it.</p>
-        <p class="card__date"><time datetime="2026-09-17">17 Sept 2026</time></p>
-      </a>
-      <a class="card card--post" href="blog/costing-a-work-order-in-erpnext.html">
-        <p class="card__index">Manufacturing &middot; 10 min read</p>
-        <h2>Costing a work order correctly in ERPNext</h2>
-        <p>Where material, operation and overhead costs land, and why the finished-goods valuation disagrees with what the plant expects.</p>
-        <p class="card__date"><time datetime="2026-09-24">24 Sept 2026</time></p>
-      </a></div></div>
-</section>
+<section class="band blog">
+  <div class="shell">
+    <div class="blog__head">
+      <div>
+        <p class="eyebrow">04 / Resources</p>
+        <h2 class="blog__title">From the blog</h2>
+      </div>
+      <a class="link-arrow" href="blog.html">All articles &rarr;</a>
+    </div>
 
+    <div class="blog__grid">
+
+      <a class="blog-card" href="blog/erpnext-vs-odoo.html">
+        <div class="blog-card__meta">
+          <span class="blog-card__tag">ERP selection</span>
+          <span class="blog-card__time">9 min read</span>
+        </div>
+        <h3>ERPNext vs Odoo: an honest comparison for mid-sized businesses</h3>
+        <p>Licensing, customisation cost and what each one is genuinely better at, from a team that implements one of them.</p>
+        <span class="blog-card__cta">Read article <span aria-hidden="true">&rarr;</span></span>
+      </a>
+
+      <a class="blog-card" href="blog/erp-implementations-slip.html">
+        <div class="blog-card__meta">
+          <span class="blog-card__tag">Implementation</span>
+          <span class="blog-card__time">8 min read</span>
+        </div>
+        <h3>Seven reasons ERP implementations slip, and how to catch them early</h3>
+        <p>The failure patterns we see most often, the signal each one gives early, and the question that surfaces it.</p>
+        <span class="blog-card__cta">Read article <span aria-hidden="true">&rarr;</span></span>
+      </a>
+
+      <a class="blog-card" href="blog/costing-work-order-erpnext.html">
+        <div class="blog-card__meta">
+          <span class="blog-card__tag">Manufacturing</span>
+          <span class="blog-card__time">10 min read</span>
+        </div>
+        <h3>Costing a work order correctly in ERPNext</h3>
+        <p>Where material, operation and overhead costs land, and why the finished-goods valuation disagrees with what the plant expects.</p>
+        <span class="blog-card__cta">Read article <span aria-hidden="true">&rarr;</span></span>
+      </a>
+
+    </div>
+  </div>
+</section
 
 <section class="band band--ink cta-band">
   <div class="shell cta-band__grid">

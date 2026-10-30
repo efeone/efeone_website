@@ -37,7 +37,7 @@
     <nav class="site-nav" id="site-nav" aria-label="Main">
       <a href="services.html">Services</a>
           <a href="industries.html">Industries</a>
-          <a href="case-studies.html">Case studies</a>
+          <!-- <a href="case-studies.html">Case studies</a> -->
           <a href="blog.html">Blog</a>
           <a href="about.html">About</a>
       <a class="btn btn--primary site-nav__cta" href="contact.html">Talk to us</a>
@@ -47,171 +47,162 @@
     </button>
   </div>
 </header>
+
 <main id="main">
 
+<section class="hx">
+  <div class="shell">
 
-<!-- <section class="band  hero">
-  <div class="shell hero__grid">
-    <div class="hero__text">
-      <h1>ERP that fits the way your business already works</h1>
-      <p class="lede">efeone implements, customises and supports ERPNext for manufacturers, distributors, hospitals and project businesses. Open-source software, built around your process — not the other way round.</p>
-      <div class="actions"><a class="btn btn--primary" href="contact.html">Book a discovery call</a><a class="btn btn--outline" href="services.html">See all services</a></div>
-    </div> -->
-    <!-- <div class="hero__aside">
-    <div class="glance">
-      <div class="glance__head glance__head--ink">
-        <p class="eyebrow eyebrow--inverse">What we do</p>
+    <div class="hx__grid">
+
+      <!-- LEFT: text and buttons -->
+      <div class="hx__left">
+        <h1 class="hx__title">ERP that fits the way your business already works</h1>
+
+        <p class="hx__lead">
+          We set up and support ERPNext for manufacturers, distributors, hospitals and project businesses, with one open-source team from first workshop to long-term support.
+        </p>
+
+        <div class="hx__actions">
+          <a class="hx-btn hx-btn--solid" href="contact.html">Book a discovery call <span aria-hidden="true">&rarr;</span></a>
+          <a class="hx-btn hx-btn--ghost" href="services.html">See all services</a>
+        </div>
       </div>
-      <div class="glance__items">
-        <div class="glance__item"><h3>Implementation</h3><p>Discovery, configuration, migration and go-live on ERPNext.</p></div>
-        <div class="glance__item"><h3>Customisation</h3><p>Custom apps, doctypes and reports for the gaps standard ERP leaves.</p></div>
-        <div class="glance__item"><h3>Integration</h3><p>Web, Android and iOS front ends on one ERP backbone.</p></div>
-        <div class="glance__item"><h3>Support &amp; AMC</h3><p>Upgrades, fixes and training after go-live.</p></div>
+
+      <!-- RIGHT: What we do tiles -->
+      <div class="hx__right">
+        <p class="hx__label">What we do</p>
+
+        <div class="hx-list">
+
+          <a class="hx-row" href="services.html#implementation">
+            <span class="hx-row__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 8l-9-5-9 5v8l9 5 9-5V8z"/><path d="M3 8l9 5 9-5M12 13v8"/></svg>
+            </span>
+            <div class="hx-row__text">
+              <h3>Implementation</h3>
+              <p>Discovery, configuration, migration and go-live on ERPNext.</p>
+            </div>
+            <span class="hx-row__go" aria-hidden="true">&rarr;</span>
+          </a>
+
+          <a class="hx-row" href="services.html#customisation">
+            <span class="hx-row__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></svg>
+            </span>
+            <div class="hx-row__text">
+              <h3>Customisation</h3>
+              <p>Custom apps, doctypes and reports for the gaps standard ERP leaves.</p>
+            </div>
+            <span class="hx-row__go" aria-hidden="true">&rarr;</span>
+          </a>
+
+          <a class="hx-row" href="services.html#integration">
+            <span class="hx-row__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>
+            </span>
+            <div class="hx-row__text">
+              <h3>Integration</h3>
+              <p>Web, Android and iOS front ends on one ERP backbone.</p>
+            </div>
+            <span class="hx-row__go" aria-hidden="true">&rarr;</span>
+          </a>
+
+          <a class="hx-row" href="services.html#support">
+            <span class="hx-row__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 14v-2a9 9 0 0 1 18 0v2"/><path d="M3 14h3v5H3zM18 14h3v5h-3z"/></svg>
+            </span>
+            <div class="hx-row__text">
+              <h3>Support &amp; AMC</h3>
+              <p>Upgrades, fixes and training after go-live.</p>
+            </div>
+            <span class="hx-row__go" aria-hidden="true">&rarr;</span>
+          </a>
+
+        </div>
       </div>
-    </div></div> -->
 
-
-    <!-- <section class="svc">
-  <p class="svc__eyebrow">WHAT WE DO</p>
-
-  <div class="svc-cards">
-
-    <article class="svc-card" tabindex="0">
-      <div class="svc-card__media" style="--img: url('images/implementation.jpg');"></div>
-      <div class="svc-card__body">
-        <span class="svc-card__num">01</span>
-        <h3 class="svc-card__title">Implementation</h3>
-        <p class="svc-card__text">Discovery, configuration, migration and go-live on ERPNext.</p>
-      </div>
-    </article>
-
-    <article class="svc-card" tabindex="0">
-      <div class="svc-card__media" style="--img: url('images/customisation.jpg');"></div>
-      <div class="svc-card__body">
-        <span class="svc-card__num">02</span>
-        <h3 class="svc-card__title">Customisation</h3>
-        <p class="svc-card__text">Custom apps, doctypes and reports for the gaps standard ERP leaves.</p>
-      </div>
-    </article>
-
-    <article class="svc-card" tabindex="0">
-      <div class="svc-card__media" style="--img: url('images/integration.jpg');"></div>
-      <div class="svc-card__body">
-        <span class="svc-card__num">03</span>
-        <h3 class="svc-card__title">Integration</h3>
-        <p class="svc-card__text">Web, Android and iOS front ends on one ERP backbone.</p>
-      </div>
-    </article>
-
-    <article class="svc-card" tabindex="0">
-      <div class="svc-card__media" style="--img: url('images/support.jpg');"></div>
-      <div class="svc-card__body">
-        <span class="svc-card__num">04</span>
-        <h3 class="svc-card__title">Support &amp; AMC</h3>
-        <p class="svc-card__text">Upgrades, fixes and training after go-live.</p>
-      </div>
-    </article>
+    </div><!-- end hx__grid -->
 
   </div>
 </section>
-  </div>
-</section> -->
 
-<!-- <section class="band band--ground stat-band"><div class="shell stat-band__grid">
-      <div class="stat">
-        <p class="stat__value">6</p>
-        <p class="stat__label">Industries served</p>
-      </div>
-      <div class="stat">
-        <p class="stat__value">11-50</p>
-        <p class="stat__label">Specialists in Kozhikode</p>
-      </div></div></section> -->
+<!-- Stat boxes, outside the first section -->
+<section class="hx-stats">
+  <div class="shell">
+    <div class="hx-stats__grid">
 
-
-      <section class="hx">
-  <div class="shell hx__grid">
-
-    <!-- LEFT -->
-    <div class="hx__left">
-      <h1 class="hx__title">ERP that fits the way your business already works</h1>
-
-      <p class="hx__lead">
-        Efeone implements, customises and supports ERPNext for manufacturers, distributors,
-        hospitals and project businesses.
-      </p>
-      <p class="hx__sub">
-        Open-source software, built around your process, not the other way round.
-        From the first workshop to go-live and annual support, one team stays with you.
-      </p>
-
-      <div class="hx__actions">
-        <a class="hx-btn hx-btn--solid" href="contact.html">Book a discovery call <span aria-hidden="true">&rarr;</span></a>
-        <a class="hx-btn hx-btn--ghost" href="services.html">See all services</a>
+      <div class="hx-stat">
+        <span class="hx-stat__icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21V10l6 4V10l6 4V6h6v15z"/></svg>
+        </span>
+        <div class="hx-stat__body">
+          <strong data-count="6">6</strong>
+          <span>Industries served</span>
+        </div>
       </div>
 
-      <div class="hx__stats">
-        <div><b>6</b><span>Industries served</span></div>
-        <div><b>8</b><span>Services offered</span></div>
-        <div><b>11–50</b><span>Specialists in Kozhikode</span></div>
+      <div class="hx-stat">
+        <span class="hx-stat__icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+        </span>
+        <div class="hx-stat__body">
+          <strong data-count="8">8</strong>
+          <span>Services offered</span>
+        </div>
       </div>
+
+      <div class="hx-stat">
+        <span class="hx-stat__icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6"/><circle cx="17.5" cy="9" r="2.5"/><path d="M17 14.2c2.6.3 4.5 2.2 4.5 5.3"/></svg>
+        </span>
+        <div class="hx-stat__body">
+          <strong>11&ndash;50</strong>
+          <span>Specialists in Kozhikode</span>
+        </div>
+      </div>
+
     </div>
-
-    <!-- RIGHT -->
-    <div class="hx__right">
-      <p class="hx__label">What we do</p>
-
-      <div class="hx-cards">
-
-        <a class="hx-card">
-          <div class="hx-card__media">
-            <!-- To use a photo, put <img src="images/implementation.jpg" alt=""> here -->
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 8l-9-5-9 5v8l9 5 9-5V8z"/><path d="M3 8l9 5 9-5M12 13v8"/></svg>
-          </div>
-          <div class="hx-card__body">
-            <p class="hx-card__num">01</p>
-            <h3>Implementation</h3>
-            <p>Discovery, configuration, migration and go-live on ERPNext.</p>
-          </div>
-        </a>
-
-        <a class="hx-card">
-          <div class="hx-card__media">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></svg>
-          </div>
-          <div class="hx-card__body">
-            <p class="hx-card__num">02</p>
-            <h3>Customisation</h3>
-            <p>Custom apps, doctypes and reports for the gaps standard ERP leaves.</p>
-          </div>
-        </a>
-
-        <a class="hx-card">
-          <div class="hx-card__media">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>
-          </div>
-          <div class="hx-card__body">
-            <p class="hx-card__num">03</p>
-            <h3>Integration</h3>
-            <p>Web, Android and iOS front ends on one ERP backbone.</p>
-          </div>
-        </a>
-
-        <a class="hx-card">
-          <div class="hx-card__media">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 14v-2a9 9 0 0 1 18 0v2"/><path d="M3 14h3v5H3zM18 14h3v5h-3z"/></svg>
-          </div>
-          <div class="hx-card__body">
-            <p class="hx-card__num">04</p>
-            <h3>Support &amp; AMC</h3>
-            <p>Upgrades, fixes and training after go-live.</p>
-          </div>
-        </a>
-
-      </div>
-    </div>
-
   </div>
 </section>
+
+</main>
+
+<script>
+/* tiles: spotlight follows the mouse + gentle 3D tilt */
+document.querySelectorAll('.hx-row').forEach(function (tile) {
+  tile.addEventListener('pointermove', function (e) {
+    var r = tile.getBoundingClientRect();
+    var x = (e.clientX - r.left) / r.width - 0.5;
+    var y = (e.clientY - r.top) / r.height - 0.5;
+    tile.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+    tile.style.setProperty('--my', (e.clientY - r.top) + 'px');
+    tile.style.setProperty('--ry', (x * 10) + 'deg');
+    tile.style.setProperty('--rx', (-y * 10) + 'deg');
+  });
+  tile.addEventListener('pointerleave', function () {
+    tile.style.setProperty('--rx', '0deg');
+    tile.style.setProperty('--ry', '0deg');
+  });
+});
+
+/* stat numbers count up when scrolled into view */
+var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var io = new IntersectionObserver(function (entries) {
+  entries.forEach(function (en) {
+    if (!en.isIntersecting) return;
+    var el = en.target, end = +el.dataset.count, n = 0;
+    io.unobserve(el);
+    if (reduce) { el.textContent = end; return; }
+    el.textContent = 0;
+    var t = setInterval(function () {
+      n++; el.textContent = n;
+      if (n >= end) clearInterval(t);
+    }, 900 / end);
+  });
+}, { threshold: .6 });
+document.querySelectorAll('[data-count]').forEach(function (el) { io.observe(el); });
+</script>
 
 <!-- <section class="band">
   <div class="shell">
@@ -409,27 +400,27 @@
 
       <div class="ind__tabs">
         <label class="ind-tab" for="ind-1">
-          <span class="ind-tab__icon"><svg viewBox="0 0 24 24"><path d="M3 21V9l6 4V9l6 4V5h4v16H3z"/></svg></span>
+          <span class="ind-tab__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21V9l6 4V9l6 4V5h4v16H3z"/></svg></span>
           <span>Manufacturing</span>
         </label>
         <label class="ind-tab" for="ind-2">
-          <span class="ind-tab__icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg></span>
+          <span class="ind-tab__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg></span>
           <span>Healthcare</span>
         </label>
         <label class="ind-tab" for="ind-3">
-          <span class="ind-tab__icon"><svg viewBox="0 0 24 24"><path d="M3 18h18M5 18a7 7 0 0 1 14 0M12 7v4"/></svg></span>
+          <span class="ind-tab__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18h18M5 18a7 7 0 0 1 14 0M12 7v4"/></svg></span>
           <span>Construction</span>
         </label>
         <label class="ind-tab" for="ind-4">
-          <span class="ind-tab__icon"><svg viewBox="0 0 24 24"><path d="M3 10l9-6 9 6v10H3z"/><path d="M9 20v-6h6v6"/></svg></span>
+          <span class="ind-tab__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10l9-6 9 6v10H3z"/><path d="M9 20v-6h6v6"/></svg></span>
           <span>Distribution</span>
         </label>
         <label class="ind-tab" for="ind-5">
-          <span class="ind-tab__icon"><svg viewBox="0 0 24 24"><path d="M1 4h13v12H1zM14 9h4l4 4v3h-8z"/><circle cx="6" cy="18" r="1.5"/><circle cx="18" cy="18" r="1.5"/></svg></span>
+          <span class="ind-tab__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M1 4h13v12H1zM14 9h4l4 4v3h-8z"/><circle cx="6" cy="18" r="1.5"/><circle cx="18" cy="18" r="1.5"/></svg></span>
           <span>Logistics &amp; delivery</span>
         </label>
         <label class="ind-tab" for="ind-6">
-          <span class="ind-tab__icon"><svg viewBox="0 0 24 24"><path d="M4 5h10M8 12h12M6 19h8"/></svg></span>
+          <span class="ind-tab__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h10M8 12h12M6 19h8"/></svg></span>
           <span>Project businesses</span>
         </label>
       </div>
@@ -444,6 +435,9 @@
             <p class="ind-panel__desc">BOMs, work orders, job cards and shop-floor costing, tied to live stock and accounts.</p>
             <a class="ind-btn" href="industries/manufacturing.html">Explore Manufacturing <span aria-hidden="true">&rarr;</span></a>
           </div>
+          <div class="ind-panel__media">
+            <img class="ind-photo" src="assets/img/manufacturing.jpg" alt="Manufacturing shop floor" width="800" height="600" loading="lazy" decoding="async">
+          </div>
         </div>
 
         <div class="ind-panel" data-num="02">
@@ -453,6 +447,9 @@
             <p class="ind-panel__lead">For clinics and hospitals running patients, pharmacy and billing together.</p>
             <p class="ind-panel__desc">Patient records, appointments, pharmacy and billing on one connected system.</p>
             <a class="ind-btn" href="industries/healthcare.html">Explore Healthcare <span aria-hidden="true">&rarr;</span></a>
+          </div>
+          <div class="ind-panel__media">
+            <img class="ind-photo" src="assets/img/healthcare.jpg" alt="Healthcare facility" width="800" height="600" loading="lazy" decoding="async">
           </div>
         </div>
 
@@ -464,6 +461,9 @@
             <p class="ind-panel__desc">Material consumption, labour, sub-contracts and site accounts, all costed per project.</p>
             <a class="ind-btn" href="industries/construction.html">Explore Construction <span aria-hidden="true">&rarr;</span></a>
           </div>
+          <div class="ind-panel__media">
+            <img class="ind-photo" src="assets/img/construction.jpg" alt="Construction site" width="800" height="600" loading="lazy" decoding="async">
+          </div>
         </div>
 
         <div class="ind-panel" data-num="04">
@@ -473,6 +473,9 @@
             <p class="ind-panel__lead">For distributors managing stock, suppliers and pricing across locations.</p>
             <p class="ind-panel__desc">Multi-warehouse stock, supplier terms and route pricing in one place.</p>
             <a class="ind-btn" href="industries/distribution.html">Explore Distribution <span aria-hidden="true">&rarr;</span></a>
+          </div>
+          <div class="ind-panel__media">
+            <img class="ind-photo" src="assets/img/distribution.jpg" alt="Distribution warehouse" width="800" height="600" loading="lazy" decoding="async">
           </div>
         </div>
 
@@ -484,6 +487,9 @@
             <p class="ind-panel__desc">Dispatch, driver apps, proof of delivery and settlement across web and mobile.</p>
             <a class="ind-btn" href="industries/logistics-delivery.html">Explore Logistics <span aria-hidden="true">&rarr;</span></a>
           </div>
+          <div class="ind-panel__media">
+            <img class="ind-photo" src="assets/img/logistics.jpg" alt="Logistics and delivery" width="800" height="600" loading="lazy" decoding="async">
+          </div>
         </div>
 
         <div class="ind-panel" data-num="06">
@@ -494,13 +500,15 @@
             <p class="ind-panel__desc">Estimates, milestones, billing and project profitability tracked together.</p>
             <a class="ind-btn" href="industries/project-businesses.html">Explore Projects <span aria-hidden="true">&rarr;</span></a>
           </div>
+          <div class="ind-panel__media">
+            <img class="ind-photo" src="assets/img/project%20business.jpg" alt="Project team at work" width="800" height="600" loading="lazy" decoding="async">
+          </div>
         </div>
 
       </div>
     </div>
   </div>
 </section>
-
 
 
 <!-- <section class="band">
@@ -531,7 +539,7 @@
   </div>
 </section> -->
 
-<section class="band blog">
+<!-- <section class="band blog">
   <div class="shell">
     <div class="blog__head">
       <div>
@@ -575,7 +583,7 @@
 
     </div>
   </div>
-</section>
+</section> -->
 
 
 <section class="band band--ink cta-band">

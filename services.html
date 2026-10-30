@@ -37,7 +37,7 @@
     <nav class="site-nav" id="site-nav" aria-label="Main">
       <a href="services.html" aria-current="page">Services</a>
           <a href="industries.html">Industries</a>
-          <a href="case-studies.html">Case studies</a>
+          <!-- <a href="case-studies.html">Case studies</a> -->
           <a href="blog.html">Blog</a>
           <a href="about.html">About</a>
       <a class="btn btn--primary site-nav__cta" href="contact.html">Talk to us</a>
@@ -50,69 +50,88 @@
 <main id="main">
 
 
-<section class="band  hero">
+<section class="band  hero hero--center">
   <div class="shell ">
     <div class="hero__text">
-      <p class="eyebrow">Services</p>
+      <!-- <p class="eyebrow">Services</p> -->
       <h1>ERP and software services</h1>
-      <p class="lede">Eight things we do, each with its own page so you can read what the work actually involves before you call us.</p>
-      <div class="actions"><a class="btn btn--primary" href="contact.html">Book a discovery call</a></div>
+      <p class="lede"> With efeone, you can list your requirements for a software product and then receive the completed product with all of your criteria met and more. We are always striving to make our product more than just "Paper to Digital" by improving its operations to meet your demands and introducing features that will benefit you.</p>
+      <!-- <div class="actions"><a class="btn btn--primary" href="contact.html">Book a discovery call</a></div> -->
     </div>
     
   </div>
 </section>
 
-<section class="band">
+<section class="band svc">
   <div class="shell">
-    <div class="row-links">
-      <a class="row-link" href="services/erpnext-implementation.html">
-        <span class="row-link__index">01</span>
-        <span class="row-link__title">ERPNext implementation</span>
-        <span class="row-link__note">Scoping, configuration, data migration and go-live support on ERPNext.</span>
-        <span class="row-link__arrow" aria-hidden="true">&rarr;</span>
+
+    <div class="svc__grid">
+
+      <a class="svc-card" href="services/erpnext-implementation.html">
+        <span class="svc-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M21 8l-9-5-9 5v8l9 5 9-5V8z"/><path d="M3 8l9 5 9-5M12 13v8"/></svg>
+        </span>
+        <h3>ERPNext implementation</h3>
+        <p>Scoping, configuration, data migration and go-live support on ERPNext.</p>
       </a>
-      <a class="row-link" href="services/erp-customisation.html">
-        <span class="row-link__index">02</span>
-        <span class="row-link__title">ERP customisation</span>
-        <span class="row-link__note">Custom doctypes, workflows and reports for the parts of your process standard ERP misses.</span>
-        <span class="row-link__arrow" aria-hidden="true">&rarr;</span>
+
+      <a class="svc-card" href="services/erp-customisation.html">
+        <span class="svc-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></svg>
+        </span>
+        <h3>ERP customisation</h3>
+        <p>Custom doctypes, workflows and reports for the parts of your process standard ERP misses.</p>
       </a>
-      <a class="row-link" href="services/software-development.html">
-        <span class="row-link__index">03</span>
-        <span class="row-link__title">Software development</span>
-        <span class="row-link__note">Web and mobile applications built on the Frappe framework and wired into your ERP.</span>
-        <span class="row-link__arrow" aria-hidden="true">&rarr;</span>
+
+      <a class="svc-card" href="services/software-development.html">
+        <span class="svc-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>
+        </span>
+        <h3>Software development</h3>
+        <p>Web and mobile applications built on the Frappe framework and wired into your ERP.</p>
       </a>
-      <a class="row-link" href="services/business-re-engineering.html">
-        <span class="row-link__index">04</span>
-        <span class="row-link__title">Business re-engineering</span>
-        <span class="row-link__note">Mapping and reworking how the business runs before any software is configured.</span>
-        <span class="row-link__arrow" aria-hidden="true">&rarr;</span>
+
+      <a class="svc-card" href="services/business-re-engineering.html">
+        <span class="svc-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 0 1-15.5 6.2M3 12A9 9 0 0 1 18.5 5.8M18 2v4h-4M6 22v-4h4"/></svg>
+        </span>
+        <h3>Business re-engineering</h3>
+        <p>Mapping and reworking how the business runs before any software is configured.</p>
       </a>
-      <a class="row-link" href="services/ecommerce-development.html">
-        <span class="row-link__index">05</span>
-        <span class="row-link__title">eCommerce development</span>
-        <span class="row-link__note">Storefronts wired straight into live stock, pricing and accounts.</span>
-        <span class="row-link__arrow" aria-hidden="true">&rarr;</span>
+
+      <a class="svc-card" href="services/ecommerce-development.html">
+        <span class="svc-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M6 6h15l-1.5 9h-12zM6 6L5 3H2"/><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/></svg>
+        </span>
+        <h3>eCommerce development</h3>
+        <p>Storefronts wired straight into live stock, pricing and accounts.</p>
       </a>
-      <a class="row-link" href="services/project-management.html">
-        <span class="row-link__index">06</span>
-        <span class="row-link__title">Project management</span>
-        <span class="row-link__note">Tasks, timesheets, costing and progress tracked on one system.</span>
-        <span class="row-link__arrow" aria-hidden="true">&rarr;</span>
+
+      <a class="svc-card" href="services/project-management.html">
+        <span class="svc-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><path d="M9 3h6v4H9zM9 14l2 2 4-4"/></svg>
+        </span>
+        <h3>Project management</h3>
+        <p>Tasks, timesheets, costing and progress tracked on one system.</p>
       </a>
-      <a class="row-link" href="services/delivery-management.html">
-        <span class="row-link__index">07</span>
-        <span class="row-link__title">Delivery management</span>
-        <span class="row-link__note">Dispatch, driver apps, proof of delivery and settlement across web and mobile.</span>
-        <span class="row-link__arrow" aria-hidden="true">&rarr;</span>
+
+      <a class="svc-card" href="services/delivery-management.html">
+        <span class="svc-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M1 4h13v12H1zM14 9h4l4 4v3h-8z"/><circle cx="6" cy="18" r="1.5"/><circle cx="18" cy="18" r="1.5"/></svg>
+        </span>
+        <h3>Delivery management</h3>
+        <p>Dispatch, driver apps, proof of delivery and settlement across web and mobile.</p>
       </a>
-      <a class="row-link" href="services/support-amc-migration.html">
-        <span class="row-link__index">08</span>
-        <span class="row-link__title">Support, AMC &amp; migration</span>
-        <span class="row-link__note">Version upgrades, fixes, new reports and user support on an annual contract.</span>
-        <span class="row-link__arrow" aria-hidden="true">&rarr;</span>
-      </a></div>
+
+      <a class="svc-card" href="services/support-amc-migration.html">
+        <span class="svc-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M3 14v-2a9 9 0 0 1 18 0v2"/><path d="M3 14h3v5H3zM18 14h3v5h-3z"/></svg>
+        </span>
+        <h3>Support, AMC &amp; migration</h3>
+        <p>Version upgrades, fixes, new reports and user support on an annual contract.</p>
+      </a>
+
+    </div>
   </div>
 </section>
 
@@ -147,8 +166,8 @@
     <div class="site-footer__brand">
       <div class="logo"><img class="logo__img" src="assets/img/efeone-logo.png" alt="efeone — everything for everyone" width="730" height="168"></div>
       <address>
-        Carino INC, Pooladikkunnu<br>
-        Eranhikkal, Kozhikode 673303<br>
+        K K Tower, Pantheeramkavu<br>
+        Kozhikode 673019<br>
         Kerala, India<br>
         <a href="mailto:info@efeone.com">info@efeone.com</a>
         
