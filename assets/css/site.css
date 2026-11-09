@@ -2150,3 +2150,207 @@ p:last-child { margin-bottom: 0; }
     grid-template-columns: 1fr;
   }
 }
+/* ===== Our Clients: auto-scrolling logo rows, no cards (namespaced: cl) ===== */
+
+/* ===== 02 / Clients: clean logo grid (namespaced: cl) =====
+   Replace everything from ".cl {" to the end of the clients block in site.css
+   (the old marquee, arrow and .cl-rows rules are no longer used). */
+
+.cl {
+  --cl-logo-h: clamp(80px, 8vw, 104px);              /* one container height for every logo */
+  --cl-col-gap: clamp(16px, 2.4vw, 36px);
+  --cl-row-gap: clamp(20px, 3vw, 44px);
+
+  /* Monochrome for the dark theme.
+     grayscale removes colour, invert turns dark marks light AND turns the white
+     ground black; mix-blend-mode: screen (below) then makes that black vanish
+     into the page, so no extra SVG filter is needed.
+     To tune: raise contrast for crisper marks, lower it for softer ones. */
+  --cl-logo-filter: grayscale(1) invert(1) contrast(1.1);
+
+  overflow: hidden;
+}
+
+/* ---------- header: text left, country pills right ---------- */
+.cl__head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  column-gap: clamp(2rem, 6vw, 5rem);
+  margin-bottom: clamp(2.5rem, 5vw, 3.5rem);
+}
+.cl__title {
+  margin: 0 0 1rem;
+  max-width: 17em;
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-size: clamp(1.8rem, 3.4vw, 2.8rem);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -.03em;
+  color: #f4f1ea;
+}
+.cl__intro {
+  margin: 0;
+  max-width: 44em;
+  color: #a9a9a4;
+  line-height: 1.7;
+}
+.cl__regions {
+  display: flex;
+  flex-wrap: nowrap;                 /* all five stay on one line on desktop */
+  gap: .5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.cl__regions li {
+  white-space: nowrap;               /* "Saudi Arabia" never breaks */
+  padding: .4rem .9rem;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 999px;
+  background: #111;
+  color: #d9d7d2;
+  font-size: .85rem;
+}
+
+/* ---------- groups, sub-labels and dividers ---------- */
+.cl__group {
+  padding-top: clamp(1.75rem, 3vw, 2.5rem);
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+.cl__group + .cl__group { margin-top: clamp(2.5rem, 5vw, 3.5rem); }
+
+.cl__label {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  margin: 0 0 clamp(1.75rem, 3vw, 2.5rem);
+  color: #a9a9a4;
+  font-size: .85rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.cl__label::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(239,232,218,.4), transparent);
+}
+
+/* ---------- logo grid ---------- */
+.cl-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: var(--cl-row-gap) var(--cl-col-gap);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.cl-grid--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+/* equal-height container, logo centred both ways; no card, border or background */
+.cl-tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--cl-logo-h);
+  min-width: 0;
+  margin: 0;
+  padding: 6px 10px;                 /* breathing room so neighbours never touch */
+}
+.cl-tile img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 190px;
+  object-fit: contain;               /* keeps proportions: no stretch, crop or distortion */
+  filter: var(--cl-logo-filter);
+  mix-blend-mode: screen;            /* black (the old white ground) disappears on the dark page */
+  opacity: .9;
+}
+
+/* ---------- responsive ---------- */
+/* Tablet: 3 columns (non-profits go 2 x 2 so there is no lone logo) */
+@media (max-width: 1024px) {
+  .cl-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .cl-grid--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* Header stacks before the pills would be squeezed */
+@media (max-width: 960px) {
+  .cl__head { grid-template-columns: 1fr; row-gap: 1.5rem; align-items: start; }
+  .cl__regions { flex-wrap: wrap; }
+}
+
+/* Mobile: 2 columns */
+@media (max-width: 560px) {
+  .cl {
+    --cl-logo-h: 76px;
+    --cl-col-gap: 12px;
+    --cl-row-gap: 18px;
+  }
+  .cl-grid,
+  .cl-grid--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cl-tile { padding: 4px 6px; }
+}
+
+/* ---------- rotating pages (only active when clients.js runs) ----------
+   Without JavaScript all 51 logos simply show in the grid above. */
+.cl-grid[data-paged] { --cl-rows: 3; align-content: start; }
+.cl-grid[data-paged] {
+  min-height: calc(var(--cl-rows) * var(--cl-logo-h) + (var(--cl-rows) - 1) * var(--cl-row-gap));
+}
+.cl-tile[hidden] { display: none; }
+/* fade the logos themselves (not the grid) so the blend mode keeps working */
+.cl-tile img { transition: opacity .3s ease; }
+.cl-grid.is-fading .cl-tile img { opacity: 0; }
+
+.cl-ctrl {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: clamp(1.5rem, 3vw, 2.25rem);
+}
+.cl-ctrl[hidden] { display: none; }
+.cl-ctrl__btn {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 50%;
+  background: none;
+  color: #efe8da;
+  cursor: pointer;
+  transition: border-color .2s ease, color .2s ease;
+}
+.cl-ctrl__btn:hover { border-color: rgba(239,232,218,.5); color: #fff; }
+.cl-ctrl__btn:focus-visible,
+.cl-dot:focus-visible { outline: 2px solid #efe8da; outline-offset: 3px; }
+.cl-ctrl__btn svg {
+  width: 18px; height: 18px;
+  fill: none; stroke: currentColor; stroke-width: 2;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+.cl-dots { display: flex; align-items: center; gap: .6rem; }
+.cl-dot {
+  position: relative;
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255,255,255,.25);
+  cursor: pointer;
+  transition: width .25s ease, background .25s ease;
+}
+.cl-dot::after { content: ""; position: absolute; inset: -10px -4px; }   /* larger tap area */
+.cl-dot[aria-current="true"] { width: 24px; background: #efe8da; }
+
+@media (max-width: 1024px) { .cl-grid[data-paged] { --cl-rows: 4; } }
+@media (max-width: 560px)  { .cl-grid[data-paged] { --cl-rows: 5; } }
+@media (prefers-reduced-motion: reduce) {
+  .cl-tile img, .cl-dot, .cl-ctrl__btn { transition: none; }
+}
