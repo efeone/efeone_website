@@ -797,3 +797,18 @@ p:last-child { margin-bottom: 0; }
   .ct-wrap .ct-card { padding: 22px 18px; }
   .ct-wrap .ct-form { grid-template-columns: 1fr; }
 }
+
+/* Centered inner-page hero (Services, Industries) */
+.hero--center .hero__text {
+  max-width: 62rem;
+  margin-inline: auto;
+  text-align: center;
+}
+.hero--center h1 {
+  text-align: center;
+  margin-inline: auto;
+}
+.hero--center .lede {
+  margin-inline: auto;   /* centres the paragraph box itself */
+  text-align: center;
+}
