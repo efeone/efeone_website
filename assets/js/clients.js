@@ -1,6 +1,6 @@
 /* Clients: rotate the commercial logos one page at a time (6x3 desktop, 3x4 tablet, 2x5 mobile).
-   Auto-rotates every 5 s, pauses on hover/focus or with the pause button, and is
-   static when the visitor prefers reduced motion. Without JS every logo stays visible. */
+   Auto-rotates every 5 s, pauses on hover/focus, and is static when the visitor
+   prefers reduced motion. Without JS every logo stays visible. */
 (function () {
   var grid = document.querySelector('.cl-grid[data-paged]');
   if (!grid) return;
@@ -13,27 +13,11 @@
 
   tiles.forEach(function (li) { li.firstElementChild.loading = 'eager'; });   /* avoid pop-in on page change */
 
-  var ICON = {
-    prev: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>',
-    next: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>',
-    pause: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6v12M15 6v12"/></svg>',
-    play: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>'
-  };
   var ctrl = document.createElement('div');
   ctrl.className = 'cl-ctrl';
-  ctrl.innerHTML =
-    '<button class="cl-ctrl__btn" type="button" data-act="prev" aria-label="Previous logos">' + ICON.prev + '</button>' +
-    '<div class="cl-dots"></div>' +
-    '<button class="cl-ctrl__btn" type="button" data-act="next" aria-label="Next logos">' + ICON.next + '</button>' +
-    '<button class="cl-ctrl__btn" type="button" data-act="toggle"></button>';
+  ctrl.innerHTML = '<div class="cl-dots"></div>';
   grid.insertAdjacentElement('afterend', ctrl);
   var dots = ctrl.querySelector('.cl-dots');
-  var toggle = ctrl.querySelector('[data-act="toggle"]');
-
-  function paintToggle() {
-    toggle.innerHTML = userPaused ? ICON.play : ICON.pause;
-    toggle.setAttribute('aria-label', userPaused ? 'Start rotating logos' : 'Pause rotating logos');
-  }
 
   function apply() {
     tiles.forEach(function (li, i) { li.hidden = Math.floor(i / size) !== page; });
@@ -77,11 +61,8 @@
   }
 
   ctrl.addEventListener('click', function (e) {
-    var b = e.target.closest('button'); if (!b) return;
-    if (b.dataset.act === 'prev') go(page - 1, true);
-    else if (b.dataset.act === 'next') go(page + 1, true);
-    else if (b.dataset.act === 'toggle') { userPaused = !userPaused; paintToggle(); }
-    else if (b.dataset.page) go(+b.dataset.page, true);
+    var b = e.target.closest('button'); if (!b || !b.dataset.page) return;
+    go(+b.dataset.page, true);
     restart();
   });
 
@@ -93,6 +74,5 @@
 
   var rt; window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(layout, 150); });
 
-  paintToggle();
   layout();
 })();

@@ -95,7 +95,7 @@ the logo on every dark surface.
 
 | File | What it is | Used by |
 | --- | --- | --- |
-| `efeone-logo.png` | Full lockup, white ink, transparent, 730×168 | Header and footer |
+| `efeone-logo.jpeg` | Full lockup, white ink, transparent, 730×168 | Header and footer |
 | `efeone-logo-on-light.png` | Full lockup, black ink on white, 800×242 | JSON-LD `Organization.logo` |
 | `og-default.png` | Lockup on page black, 1200×630 | Open Graph and Twitter cards |
 | `apple-touch-icon.png` | Mark only on page black, 180×180 | Home-screen icon |
@@ -114,7 +114,7 @@ Two of these are deliberately on a solid background rather than transparent:
 search engines render the `Organization` logo on their own white surface, and a
 home-screen icon has no page behind it.
 
-Greyscale-plus-alpha keeps `efeone-logo.png` at 15 KB; it is single-colour
+Greyscale-plus-alpha keeps `efeone-logo.jpeg` at 15 KB; it is single-colour
 artwork, so storing full RGB would roughly double that for no visible gain.
 
 ## Editing
