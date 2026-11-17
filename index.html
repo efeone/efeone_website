@@ -29,7 +29,7 @@
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header">
+<!-- <header class="site-header">
   <div class="shell site-header__inner">
     <a class="logo" href="index.html" aria-label="efeone home">
       <img class="logo__img" src="assets/img/efeone-logo.jpeg" alt="" width="730" height="168">
@@ -37,7 +37,19 @@
     <nav class="site-nav" id="site-nav" aria-label="Main">
       <a href="services.html">Services</a>
           <a href="industries.html">Industries</a>
-          <!-- <a href="case-studies.html">Case studies</a> -->
+          <div class="nav-dd">
+    <button class="nav-dd__trigger" type="button" aria-haspopup="true" aria-expanded="false">
+      Products
+      <svg class="nav-dd__chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+    </button>
+    <ul class="nav-dd__menu">
+      <li><span>OneHealth</span></li>
+      <li><span>AUMMS</span></li>
+      <li><span>eSellerSuite</span></li>
+      <li><span>OneCompliance</span></li>
+      <li><span>Facility Management</span></li>
+    </ul>
+  </div>
           <a href="blog.html">Blog</a>
           <a href="about.html">About</a>
       <a class="btn btn--primary site-nav__cta" href="contact.html">Talk to us</a>
@@ -46,7 +58,8 @@
       <span class="nav-toggle__bar"></span><span class="nav-toggle__bar"></span><span class="nav-toggle__bar"></span>
     </button>
   </div>
-</header>
+</header> -->
+<div id="site-header"></div>
 
 <main id="main">
 
@@ -141,7 +154,7 @@
     <div class="sec-head">
       <div class="sec-head__text">
         <p class="eyebrow">01 / Clients</p>
-        <h2 class="cl__title" id="clients-title">Trusted by 55+ organisations around the world</h2>
+        <h2 class="cl__title" id="clients-title">Trusted by <span id="clCount">55+</span> organisations around the world</h2>
         <p class="cl__intro">From technology start-ups and trading houses to schools, colleges and non&#8209;profits, organisations of every size rely on efeone to run their finance, stock, projects and daily operations on one system.</p>
       </div>
       <ul class="regions" aria-label="Where our clients are based">
@@ -154,70 +167,15 @@
     </div>
 
     <div class="cl__group">
-      <p class="cl__label">Commercial &amp; institutional &middot; 51 organisations</p>
-      <ul class="cl-grid" data-paged>
-        <li class="cl-tile"><img src="assets/img/abk-imports-private-limited.png" alt="Abk Imports Private Limited" width="440" height="369" loading="lazy" decoding="async"></li>
-        <li class="cl-tile"><img src="assets/img/adam-star.png" alt="Adam Star" width="440" height="369" loading="lazy" decoding="async"></li>
-        <li class="cl-tile"><img src="assets/img/aifer-education-pvt-ltd.png" alt="Aifer Education Pvt Ltd" width="440" height="369" loading="lazy" decoding="async"></li>
-        <li class="cl-tile"><img src="assets/img/al-sagar-pipe-factory.png" alt="Al Sagar Pipe Factory" width="440" height="369" loading="lazy" decoding="async"></li>
-        <li class="cl-tile"><img src="assets/img/allde-food-and-beverages-industries-llc.png" alt="Allde Food &amp; Beverages Industries LLC" width="440" height="369" loading="lazy" decoding="async"></li>
-        <li class="cl-tile"><img src="assets/img/alrabia-network-contracting-est.png" alt="AlRabia Network Contracting Est" width="440" height="369" loading="lazy" decoding="async"></li>
-        <li class="cl-tile"><img src="assets/img/ashique-and-associates.png" alt="Ashique &amp; Associates" width="440" height="369" loading="lazy" decoding="async"></li>
-        <li class="cl-tile"><img src="assets/img/atera-care.png" alt="Atera Care" width="440" height="369" loading="lazy" decoding="async"></li>
-        <li class="cl-tile"><img src="assets/img/atlanta-network-computers-est.png" alt="Atlanta Network Computers Est" width="440" height="369" loading="lazy" decoding="async"></li>
-        <li class="cl-tile"><img src="assets/img/cap-index-enterprises-llp.png" alt="Cap-Index Enterprises LLP" width="440" height="369" loading="lazy" decoding="async"></li>
-        <li class="cl-tile"><img src="assets/img/cpas-calicut.png" alt="CPAS Calicut" width="440" height="369" loading="lazy" decoding="async"></li>
-        <li class="cl-tile"><img src="assets/img/dak-al-arabia-for-contracting.png" alt="DAK AL-ARABIA FOR CONTRACTING" width="440" height="369" loading="lazy" decoding="async"></li>
-        <li class="cl-tile"><img src="assets/img/diyos-infotech-private-limited.png" alt="Diyos Infotech Private Limited" width="440" height="369" loading="lazy" decoding="async"></li>
-        <li class="cl-tile"><img src="assets/img/earthians-software-services-llp.png" alt="earthians Software Services LLP" width="440" height="369" loading="lazy" decoding="async"></li>
-        <li class="cl-tile"><img src="assets/img/evergreen-public-school-thiruvalloor.png" alt="Evergreen Public School Thiruvalloor" width="440" height="369" loading="lazy" decoding="async"></li>
-        <li class="cl-tile"><img src="assets/img/excel-gulf.png" alt="Excel Gulf" width="440" height="369" loading="lazy" decoding="async"></li>
-        <li class="cl-tile"><img src="assets/img/fantacode-private-limited.png" alt="Fantacode Private Limited" width="440" height="369" loading="lazy" decoding="async"></li>
-        <li class="cl-tile"><img src="assets/img/farook-college.png" alt="Farook College" width="440" height="369" loading="lazy" decoding="async"></li>
-        <li class="cl-tile"><img src="assets/img/gme-global-contracting-company.png" alt="GME Global Contracting Company" width="440" height="369" loading="lazy" decoding="async"></li>
-        <li class="cl-tile"><img src="assets/img/helett-enterprises-llp.png" alt="Helett Enterprises LLP" width="440" height="369" loading="lazy" decoding="async"></li>
-        <li class="cl-tile"><img src="assets/img/helloapps-technologies-pvt-ltd.png" alt="HelloApps Technologies Pvt. Ltd." width="440" height="369" loading="lazy" decoding="async"></li>
-        <li class="cl-tile"><img src="assets/img/indictrans-technologies-pvt-ltd.png" alt="Indictrans Technologies Pvt Ltd" width="440" height="369" loading="lazy" decoding="async"></li>
-        <li class="cl-tile"><img src="assets/img/jute-mark-india.png" alt="Jute Mark India" width="440" height="369" loading="lazy" decoding="async"></li>
-        <li class="cl-tile"><img src="assets/img/k-e-safiya-autism-centre.png" alt="K. E. Safiya Autism Centre" width="440" height="369" loading="lazy" decoding="async"></li>
-        <li class="cl-tile"><img src="assets/img/kenz-technology.png" alt="Kenz Technology" width="440" height="369" loading="lazy" decoding="async"></li>
-        <li class="cl-tile"><img src="assets/img/knight-frank.png" alt="Knight Frank" width="440" height="369" loading="lazy" decoding="async"></li>
-        <li class="cl-tile"><img src="assets/img/lavanya-e-mart.png" alt="Lavanya E Mart" width="440" height="369" loading="lazy" decoding="async"></li>
-        <li class="cl-tile"><img src="assets/img/littleclouds.png" alt="littleclouds" width="440" height="369" loading="lazy" decoding="async"></li>
-        <li class="cl-tile"><img src="assets/img/madhyamam-broadcasting-limited.png" alt="Madhyamam Broadcasting Limited" width="440" height="369" loading="lazy" decoding="async"></li>
-        <li class="cl-tile"><img src="assets/img/maxcom-business-solutions.png" alt="MAXCOM Business Solutions" width="440" height="369" loading="lazy" decoding="async"></li>
-        <li class="cl-tile"><img src="assets/img/meps.png" alt="Meps" width="440" height="369" loading="lazy" decoding="async"></li>
-        <li class="cl-tile"><img src="assets/img/mrshine-labs-india-private-limited.png" alt="Mrshine Labs India Private Limited" width="440" height="369" loading="lazy" decoding="async"></li>
-        <li class="cl-tile"><img src="assets/img/najoom-al-harbi.png" alt="Najoom Al Harbi" width="440" height="369" loading="lazy" decoding="async"></li>
-        <li class="cl-tile"><img src="assets/img/nixpend.png" alt="Nixpend" width="440" height="369" loading="lazy" decoding="async"></li>
-        <li class="cl-tile"><img src="assets/img/omind-technologies-private-limited.png" alt="Omind Technologies Private Limited" width="440" height="369" loading="lazy" decoding="async"></li>
-        <li class="cl-tile"><img src="assets/img/oud-world.png" alt="Oud World" width="440" height="369" loading="lazy" decoding="async"></li>
-        <li class="cl-tile"><img src="assets/img/outland-projects.png" alt="Outland Projects" width="440" height="369" loading="lazy" decoding="async"></li>
-        <li class="cl-tile"><img src="assets/img/physics-wala.png" alt="Physics Wala" width="440" height="369" loading="lazy" decoding="async"></li>
-        <li class="cl-tile"><img src="assets/img/premium-business-consultancy.png" alt="Premium Business Consultancy" width="440" height="369" loading="lazy" decoding="async"></li>
-        <li class="cl-tile"><img src="assets/img/pw-institute-of-innovation.png" alt="PW Institute of Innovation" width="440" height="369" loading="lazy" decoding="async"></li>
-        <li class="cl-tile"><img src="assets/img/samacom-contracting-co.png" alt="Samacom Contracting Co" width="440" height="369" loading="lazy" decoding="async"></li>
-        <li class="cl-tile"><img src="assets/img/sawagold-jewels-llp.png" alt="Sawagold Jewels LLP" width="440" height="369" loading="lazy" decoding="async"></li>
-        <li class="cl-tile"><img src="assets/img/strmlne.png" alt="STRMLNE" width="440" height="369" loading="lazy" decoding="async"></li>
-        <li class="cl-tile"><img src="assets/img/tabsyst-enterprise-solutions-llp.png" alt="Tabsyst Enterprise Solutions LLP" width="440" height="369" loading="lazy" decoding="async"></li>
-        <li class="cl-tile"><img src="assets/img/tass-and-hamjit-financial-advisory-llc.png" alt="TASS &amp; HAMJIT Financial Advisory LLC" width="440" height="369" loading="lazy" decoding="async"></li>
-        <li class="cl-tile"><img src="assets/img/tass-and-hamjit-global-pvt-ltd.png" alt="TASS &amp; HAMJIT Global Pvt Ltd" width="440" height="369" loading="lazy" decoding="async"></li>
-        <li class="cl-tile"><img src="assets/img/techxcel-technologies-private-limited.png" alt="Techxcel Technologies Private Limited" width="440" height="369" loading="lazy" decoding="async"></li>
-        <li class="cl-tile"><img src="assets/img/tgs-koya-chartered-accountants.png" alt="TGS Koya Chartered Accountants" width="440" height="369" loading="lazy" decoding="async"></li>
-        <li class="cl-tile"><img src="assets/img/virtual-pro-documents-clearing-llc.png" alt="Virtual Pro Documents Clearing LLC" width="440" height="369" loading="lazy" decoding="async"></li>
-        <li class="cl-tile"><img src="assets/img/vtaxo-accounting-and-bookkeeping-co-llc.png" alt="Vtaxo Accounting and Bookkeeping Co LLC" width="440" height="369" loading="lazy" decoding="async"></li>
-        <li class="cl-tile"><img src="assets/img/wattlecorp-cybersecurity-labs-llp.png" alt="Wattlecorp Cybersecurity Labs LLP" width="440" height="369" loading="lazy" decoding="async"></li>
+      <p class="cl__label" id="clLabel">Commercial &amp; institutional &middot; 51 organisations</p>
+      <ul class="cl-grid" id="clGrid" data-paged>
       </ul>
     </div>
 
-    <div class="cl__group">
-      <p class="cl__label">Non-profit partners &middot; 4 organisations</p>
-      <ul class="cl-grid cl-grid--4">
-        <li class="cl-tile"><img src="assets/img/centre-for-wildlife-studies.png" alt="Centre for Wildlife Studies" width="440" height="369" loading="lazy" decoding="async"></li>
-        <li class="cl-tile"><img src="assets/img/pradan.png" alt="Pradan" width="440" height="369" loading="lazy" decoding="async"></li>
-        <li class="cl-tile"><img src="assets/img/t4g-impact-tech-foundation-tech4good.png" alt="T4G Impact Tech Foundation (Tech4Good)" width="440" height="369" loading="lazy" decoding="async"></li>
-        <li class="cl-tile"><img src="assets/img/tinkerhub.png" alt="TinkerHub" width="440" height="369" loading="lazy" decoding="async"></li>
-      </ul>
+    <div class="cl__group" id="clGroupNp">
+  <p class="cl__label" id="clLabelNp">Non-profit partners &middot; 4 organisations</p>
+  <ul class="cl-grid cl-grid--4" id="clGridNp">
+     </ul>
     </div>
 
   </div>
@@ -534,7 +492,51 @@
     </div>
   </div>
 </section>
+<section class="sec prd" id="products" aria-labelledby="products-title">
+  <div class="shell">
+    <div class="sec-head">
+      <div class="sec-head__text">
+        <p class="eyebrow">04 / Products</p>
+        <h2 class="prd__title" id="products-title">Ready-to-run products from efeone</h2>
+        
+      </div>
+    </div>
 
+    <div class="prd__grid">
+
+      <article class="prd-card">
+        <p class="prd-card__tag">Healthcare ERP</p>
+        <h3>OneHealth</h3>
+        <p>A hospital and clinic ERP that runs patient records, appointments, pharmacy and billing on one connected system.</p>
+      </article>
+
+      <article class="prd-card">
+        <p class="prd-card__tag">Jewellery ERP</p>
+        <h3>AUMMS</h3>
+        <p>An ERP built for jewellers, bringing stock, sales and accounts together with the controls the trade needs.</p>
+      </article>
+
+      <article class="prd-card">
+        <p class="prd-card__tag">Amazon x ERPNext</p>
+        <h3>eSellerSuite</h3>
+        <p>Connects your Amazon seller account to ERPNext through SP-API, so orders, stock and accounts stay in sync.</p>
+      </article>
+
+      <article class="prd-card prd-card--wide">
+        <p class="prd-card__tag">Compliance platform</p>
+        <h3>OneCompliance</h3>
+        <p>A web-based application for auditing, consulting and tax firms. It manages every compliance activity in one place, from business consultation, GST and tax filing to auditing, document management, record-keeping and projects. A dedicated client portal lets clients track project progress and stay updated.</p>
+      </article>
+
+      <article class="prd-card prd-card--wide">
+        <p class="prd-card__tag">Manpower supply</p>
+        <h3>Facility Management</h3>
+        <p>For agencies that supply trained staff such as security guards, cleaning and housekeeping teams. Manage deployments, attendance, contracts and invoicing for every client site from one system.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
 
 <!-- <section class="band">
   <div class="shell">
@@ -672,13 +674,14 @@
   <div class="shell site-footer__legal">
     <span>&copy; 2026 efeone. All rights reserved.</span>
     <div class="site-footer__meta">
-      <a href="privacy-policy.html">Privacy policy</a>
+      <!-- <a href="privacy-policy.html">Privacy policy</a> -->
       <a href="https://www.linkedin.com/company/efeone/" rel="noopener">LinkedIn</a>
       <a href="https://www.instagram.com/efeone.social/" rel="noopener">Instagram</a>
       <a href="https://www.facebook.com/efeone.social" rel="noopener">Facebook</a>
     </div>
   </div>
 </footer>
+<script src="assets/js/layout.js" defer></script>
 <script src="assets/js/site.js" defer></script>
 </body>
 </html>
